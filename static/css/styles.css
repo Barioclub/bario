@@ -1,0 +1,909 @@
+  /* Fonts and External Imports */
+  /* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500&family=Playfair+Display:wght@400;500;600&family=Pinyon+Script&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Boreish&family=Royale+Sans&family=Matimo&family=Royale+Script&display=swap');
+  /* Variables */
+  :root {
+      --primary-pink: #FCE7E7; /* Light pink as the central color */
+      --dark-green: #616853;
+      --light-green: #8BA78F;
+      --cream: #F9F9F8;
+      --cream-dark: #D7C9B7;
+      --dark: #262626;
+      --soft-blue: #606B7F;
+      --gold: #C2A77E;
+      --gold-dark: #937324;
+      --nude: #D7C9B7;
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      --heading-font: 'Boreish', serif;
+      --subheading-font: 'RoyaleCouture-Sans', sans-serif;
+      --body-font: 'Matimo', sans-serif;
+      --script-font: 'RoyaleCouture-Script', cursive;
+  }
+
+  @font-face {
+    font-family: 'Matimo';
+    src: url('../fonts/matimo/Matimo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matimo';
+    src: url('../fonts/matimo/Matimo-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matimo';
+    src: url('../fonts/matimo/Matimo-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RoyaleCouture-Sans';
+    src: url('../fonts/royale-sans/RoyaleCouture-Sans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RoyaleCouture-Script';
+    src: url('../fonts/royale-script/RoyaleCouture-Script.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Reset and Global Styles */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--body-font);
+      line-height: 1.2;
+      color: var(--dark);
+      background-color: var(--dark);
+      overflow-x: hidden;
+  }
+
+  ::placeholder {
+    color: var(--primary-pink);
+    opacity:0.3;
+  }
+
+  /* Grid Container */
+  .grid-container {
+      display: grid;
+      /* grid-template-columns: repeat(12, 1fr); */
+      max-width: 1800px;
+      margin: 0 auto;
+      /* gap: 2rem; */
+  }
+
+  /* Header Styles */
+  header {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 4rem;
+      /* background: rgba(255, 255, 255, 0.98); */
+      background: var(--cream);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(198, 166, 100, 0.2);
+      transition: var(--transition);
+  }
+
+  header.scrolled {
+      padding: 1rem 4rem;
+      /* background: rgba(255, 255, 255, 0.95); */
+      background: var(--primary-pink);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  }
+
+  .logo-image {
+      max-height: 80px;
+      transition: var(--transition);
+  }
+
+  header.scrolled .logo-image {
+      max-height: 50px;
+  }
+  .footnote{
+    color:var(--gold);
+    /* opacity:0.6; */
+    font-size:80%;
+    padding:1rem;
+    position: relative;
+    bottom:0;
+    text-align: center;
+    background: var(--primary-pink);
+  }
+
+  .club-text {
+    font-family: var(--script-font);
+      font-size: 1.4rem;
+      display: block;
+      text-align: right;
+      margin-top: -0.8rem;
+      margin-right: 0.5rem;
+  }
+
+ /* .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--primary-pink);
+      transition: var(--transition);
+  }
+
+  .logo:hover::after {
+      width: 100%;
+  }*/
+
+  /* Hero Section */
+  .hero {
+      grid-column: 1 / -1;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 1rem;
+      align-items: center;
+      padding: 10rem 4rem 4rem;
+      position: relative;
+      /* background: linear-gradient(45deg, rgba(248, 233, 231, 0.2), rgba(255, 255, 255, 0)); */
+      /* background: var(--primary-pink); */
+      background: #f9e2e2; /* Change background to pink */
+    background-image: url('../images/pattern.png'); /* Add the diamond pattern */
+    background-repeat: repeat; /* Make the pattern repeat */
+    background-size: 100vw auto; /* Adjust the size as needed */
+  }
+
+
+  .hero-content {
+      padding-right: 2rem;
+      position: relative;
+      min-height: 10rem;
+  }
+
+  .hero-content::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -50px;
+      width: 100px;
+      height: 100px;
+      border-left: 2px solid var(--gold);
+      border-top: 2px solid var(--gold);
+      opacity: 0.5;
+      transition: var(--transition);
+  }
+
+  .hero-content:hover::before {
+      transform: translate(20px, 20px);
+      opacity: 1;
+  }
+
+  .hero h1 {
+        font-family: var(--heading-font);
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+      font-weight: 400;
+      color: var(--gold-dark);
+      position: relative;
+      min-height: 8.75rem;
+      height: auto;
+      display: block;
+      line-height: 1.2;
+      overflow: hidden;
+  }
+
+  .hero-image {
+      height: 100%;
+      background: url('../images/keys.png') center/contain no-repeat;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      /* box-shadow: 0 30px 60px rgba(0,0,0,0.1); */
+      transition: var(--transition);
+  }
+
+  /* .hero-image:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 40px 70px rgba(0,0,0,0.15);
+  } */
+
+  /* Button Styles */
+  button {
+      padding: 1.8rem 4rem;
+      background: var(--dark-green);
+      border: none;
+      color: var(--cream);
+      font-family: var(--body-font);
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+  }
+
+  button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(248, 233, 231, 0.4), transparent);
+      transition: 0.6s;
+  }
+
+  button:hover {
+      background: var(--light-green);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(140, 167, 143, 0.2);
+  }
+
+  button:hover::before {
+      left: 100%;
+  }
+
+  .service-image1 {
+      width: 100%;
+      height: 300px;
+      background: url('../images/bag.png') center/cover;
+      margin-bottom: 2rem;
+      transition: var(--transition);
+      filter: grayscale(0.3);
+  }
+
+  .service-image1 {
+      height: 100%;
+      filter: unset;
+  }
+
+
+  /* Typography Styles */
+  .section-title {
+    font-family: var(--heading-font);
+      font-size: 3.1rem;
+      color: var(--gold-dark);
+      margin-bottom: 2.1rem;
+      position: relative;
+      padding-bottom: 1rem;
+      font-weight: 400;
+  }
+
+  .section-title-lighter, .section-title-lighter2 {
+      color: var(--primary-pink);
+      font-family: var(--heading-font);
+      font-size: 3.1rem;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+      font-weight: 400;
+  }
+
+  .section-title-lighter2 {
+    color:var(--gold);
+    /* font-size: 3.1rem; */
+    margin-bottom: 0rem;
+  }
+
+  .why-join-title {
+    color: var(--primary-pink);
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    opacity:0.5;
+  }
+
+  .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--cream-dark);
+      transition: var(--transition);
+  }
+
+
+
+  .luxury-text {
+      font-size: 1rem;
+      line-height: 1.3;
+      color: var(--gold-dark);
+      font-weight: 300;
+      /* letter-spacing: 0.05em; */
+  }
+
+  .luxury-text-lighter {
+      font-size: 1rem;
+      line-height: 1.3;
+      color: var(--cream);
+      font-weight: 300;
+      /* letter-spacing: 0.05em; */
+  }
+
+  /* Who We Are Section */
+  .who-we-are {
+      grid-column: 1 / -1;
+      padding: 8rem 4rem;
+      background: var(--dark-green);
+      position: relative;
+      /* margin: 4rem 0; */
+      
+  }
+
+  .who-we-are::before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: var(--primary-pink);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.5;
+  }
+
+  .who-we-are-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+  }
+
+  .who-we-are-content .section-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  /* About Section */
+  .about {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      padding: 4rem;
+      background: var(--cream);
+      position: relative;
+      margin: 0rem 0;
+      min-height: 300px;
+      transition: var(--transition);
+  }
+
+  .about::before {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: var(--primary-pink);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.5;
+  }
+
+  .about-content {
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .about:hover .service-image1:hover {
+      transform: scale(1.02);
+  }
+
+
+  /* Waitlist Section */
+  .waitlist {
+      grid-column: 1 / -1;
+      background: var(--dark-green);
+      color: var(--cream);
+      padding: 8rem;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .waitlist {
+    padding-bottom: 2rem;
+  }
+
+  .waitlist::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(248, 233, 231, 0.2), transparent);
+      z-index: 1;
+  }
+
+  .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+  }
+
+  .input-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3rem;
+  }
+
+  /* Retreat Section */
+  .retreat {
+      grid-column: 1 / -1;
+      padding: 8rem 4rem;
+      background: var(--dark);
+      position: relative;
+  }
+
+  .retreat-content {
+      max-width: 1000px;
+      margin: 0 auto;
+  }
+
+  .retreat-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+  }
+
+  .retreat-item {
+      position: relative;
+      padding-left: 2rem;
+  }
+
+
+
+  .retreat-content p.luxury-text {
+    color:var(--primary-pink);
+  }
+  /* Animations and Reveal Effects */
+  .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  .hero-image, .fade-in,
+  .service-image1{
+      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform, opacity;
+  }
+
+  .hero-content h1,
+  .hero-content .luxury-text,
+  .hero-content button {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .service-image1 {
+      transform: scale(0.9);
+      opacity: 0;
+  }
+
+  .hero .luxury-text, .hero button {
+      opacity: 1;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+  }
+
+  /* Badge */
+  .brand-badge-image {
+    max-height: 140px;
+    padding:1rem;
+    padding-top:2rem;
+}
+
+  /* Application Form Styles */
+.application-tabs {
+display: flex;
+margin: 3rem 0 2rem;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.tab-btn {
+background: transparent;
+color: var(--cream);
+padding: 1rem 2rem;
+margin-right: 1rem;
+border: none;
+border-bottom: 3px solid transparent;
+transition: var(--transition);
+opacity: 0.7;
+}
+
+.tab-btn.active {
+border-bottom: 3px solid var(--primary-pink);
+opacity: 1;
+}
+
+.tab-btn:hover {
+background: transparent;
+opacity: 1;
+transform: translateY(0);
+box-shadow: none;
+}
+
+.tab-content {
+display: none;
+}
+
+.tab-content.active {
+display: grid;
+grid-template-columns: repeat(1, 2fr);
+}
+
+.full-width {
+width: 100%;
+}
+
+
+
+.pattern {
+    position: relative;
+    background: var(--primary-pink); /* Change background to pink */
+    background-image: url('../images/pattern7.png'); /* Add the diamond pattern */
+    background-repeat: repeat; /* Make the pattern repeat */
+    background-size: 100vw auto; /* Adjust the size as needed */
+    width:100%;
+    height:5vh;
+    grid-column: 1 / -1;
+}
+
+.tally-embed {
+    width: 100%;
+}
+
+.tally-embed iframe {
+    width: 100%;
+    border: none;
+    background: transparent;
+    min-height: 600px; /* Adjust based on your form length */
+}
+
+iframe {
+    /* Styling for the iframe itself */
+    border: none;
+    width: 100%;
+    height: 800px; /* Adjust as needed */
+  }
+/* Core structure - same for all devices */
+.bario-parallax-wrapper *, .bario-parallax-wrapper2 * {
+    box-sizing: border-box;
+  }
+  
+  .bario-scroll-container,  .bario-scroll-container2 {
+    height: 400vh; /* Create vertical scrolling space */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .bario-sticky-container, .bario-sticky-container2 {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .bario-horizontal-scroll-section, .bario-horizontal-scroll-section2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 400vw; /* Width of all slides combined */
+    display: flex;
+    will-change: transform;
+    background-color: var(--dark);
+  }
+
+  .bario-horizontal-scroll-section2 {
+    width:300vw;
+    background-color: var(--primary-pink);
+  }
+  
+  /* Add opacity transition to slides */
+  .bario-slide, .bario-slide2 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10vw;
+    opacity: 0.4; /* Start with lower opacity */
+    transition: opacity 0.8s ease; /* Smooth transition for opacity */
+  }
+  
+  /* Full opacity for visible slide */
+  .bario-slide.visible, .bario-slide2.visible {
+    opacity: 1;
+  }
+  
+  .bario-text-content,  .bario-text-content2 {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 500px;
+  }
+
+  
+  .bario-slide.visible .bario-text-content, .bario-slide2.visible .bario-text-content2 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .bario-slide p,  .bario-slide2 p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--primary-pink);
+    max-width: 400px;
+    font-family: var(--body-font);
+  }
+  .bario-slide2 p {
+    color:var(--gold-dark)
+  }
+  .bario-background-layer, .bario-background-layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .bario-background-layer2 {
+    background-image: url('../images/pattern6.png');
+    background-size: 100vw;
+    opacity: 0.03;
+  }
+  .bario-image-layer, .bario-image-layer2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+    z-index: 1;
+  }
+
+  .bario-image-layer2 {
+    right:0;
+  }
+  
+  .bario-slide.visible .bario-image-layer, .bario-slide2.visible .bario-image-layer2 {
+    transform: translateX(0);
+  }
+  
+  .bario-image-a {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('https://images.unsplash.com/photo-1518542331925-4e91e9aa0074');
+    width:45%;
+    height:100%;
+
+    right:5%;
+  }
+  .bario-image-b {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),url('../images/susnet-cyclades.jpg');
+    width:45%;
+    height:100%;
+
+    margin-left:5%;
+  }
+  .bario-image-c {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),url('../images/water.jpg');
+    width:45%;
+    height:100%;
+
+    margin-left:5%;
+  }
+  .bario-image-1 {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/sea-trip.jpg');
+  }
+  .bario-image-2{
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/community.jpg');
+  }
+  .bario-image-3{
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/cyclades.jpg');
+  }
+  
+  .bario-image-4 {
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/connections.png');
+  }
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+      
+
+      .hero {
+          grid-template-columns: 1fr;
+          padding: 11rem 2rem 2rem;
+      }
+
+      .hero-content {
+          padding-right: 0;
+      }
+
+      .hero h1 {
+          font-size: 3.5rem;
+      }
+     
+        .retreat-list {
+          grid-template-columns: 1fr;
+      }
+
+  }
+
+   
+
+  @media (max-width: 1100px) {
+      .about {
+          grid-template-columns: 1fr;
+          gap: 0rem;
+      }
+
+      .about-content {
+          padding: 0rem;
+      }
+
+      .who-we-are {
+          padding: 4rem 2rem;
+      }
+      .service-image1, .hero-image {
+        height: 270px;
+        justify-self: center;
+        width:70%;
+    }
+    .hero-image {
+        height:200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+      .hero h1 {
+          min-height: 4.75rem;
+      }
+      .hero-image {
+          height: 30vh;
+      }
+
+      .hero h1 {
+          font-size: 2.5rem;
+      }
+
+      header {
+          padding: 1rem 2rem;
+      }
+
+      .waitlist, .retreat {
+          padding: 4rem 2rem;
+      }
+
+      .input-group {
+          flex-direction: column;
+      }
+
+      button {
+          padding: 1.1rem 2rem;
+      }
+      header.scrolled {
+          padding: 1rem 2rem;
+      }
+      .service-image1 {
+          height: 210px;
+      }
+      .about{
+          padding: 4rem 2rem;
+      }
+      .form-row {
+          flex-direction: column;
+          gap: 0;
+      }
+
+      .checkbox-group {
+          flex-direction: column;
+      }
+
+      .tab-btn {
+          padding: 0.8rem 1.5rem;
+          font-size: 0.9rem;
+      }
+  }
+
+
+
+
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .tally-embed iframe {
+        min-height: 800px; /* Mobile forms need more height */
+    }
+}
+
+  
+  /* Only adjust text sizing for mobile but keep the EXACT same layout structure */
+  @media (max-width: 768px) {
+    .bario-slide, .bario-slide2 {
+      padding-left: 5vw; /* Smaller padding */
+    }
+    
+    .bario-text-content {
+      max-width: 45%; /* Narrower text area */
+    }
+    .bario-text-content2 {
+        max-width: 75%; /* Narrower text area */
+      }
+    
+    .bario-slide h3, .bario-slide2 h3, .section-title, .section-title-lighter, .section-title-lighter2 {
+      font-size: 2.5rem; /* Smaller heading */
+    }
+    
+    .luxury-text, .luxury-text-lighter, .bario-slide2 p {
+        font-size: 1.1rem;
+    }
+    .bario-slide p {
+        font-size:0.9rem;
+    }
+    /* CRITICAL: We must keep the image on the right side as per desktop */
+    .bario-image-layer, .bario-image-layer2{
+        width: 30%;
+        right: 10%;
+        left: auto;
+        opacity: 1;
+        height: 30%;
+        top: 35%;
+    }
+    .bario-image-layer2{ 
+        width:70%;
+        right:auto;
+        top:55%;
+    }
+    .bario-text-content2 {
+        transform: translateY(15vh)!important;
+    }
+    .bario-slide2 {
+        flex-direction: column;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .service-image1{
+        height: 110px;
+    }
+}
+  
