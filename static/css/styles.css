@@ -72,7 +72,7 @@
 
   ::placeholder {
     color: var(--primary-pink);
-    opacity:0.3;
+    opacity:0.6;
   }
 
   /* Grid Container */
@@ -732,10 +732,10 @@ iframe {
     margin-left:5%;
   }
   .bario-image-1 {
-    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/sea-trip.jpg');
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/palm-trees.jpeg');
   }
   .bario-image-2{
-    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/community.jpg');
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/nature.jpeg');
   }
   .bario-image-3{
     background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/cyclades.jpg');
@@ -863,7 +863,7 @@ iframe {
     }
     
     .bario-text-content {
-      max-width: 45%; /* Narrower text area */
+      max-width: 75%; /* Narrower text area */
     }
     .bario-text-content2 {
         max-width: 75%; /* Narrower text area */
@@ -879,7 +879,7 @@ iframe {
     .bario-slide p {
         font-size:0.9rem;
     }
-    /* CRITICAL: We must keep the image on the right side as per desktop */
+
     .bario-image-layer, .bario-image-layer2{
         width: 30%;
         right: 10%;
@@ -888,17 +888,22 @@ iframe {
         height: 30%;
         top: 35%;
     }
-    .bario-image-layer2{ 
-        width:70%;
+    .bario-image-layer2, .bario-image-layer{ 
+        width:80%;
         right:auto;
-        top:55%;
+        top:65%;
     }
-    .bario-text-content2 {
-        transform: translateY(15vh)!important;
+    .bario-image-layer{ 
+      width:80%;
+      filter: brightness(0.8);
+  }
+    .bario-text-content2, .bario-text-content {
+        transform: translateY(25vh)!important;
     }
-    .bario-slide2 {
+    .bario-slide2, .bario-slide {
         flex-direction: column;
     }
+
   }
 
   @media (max-width: 400px) {

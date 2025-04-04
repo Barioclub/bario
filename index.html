@@ -19,7 +19,10 @@
               <a href="#" class="logo">
                   <img src="./static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
               </a>
-              <button>Apply for Membership</button>
+              <div>
+              <button>Pre-launch List</button>
+              <!-- <button>Apply for Membership</button> -->
+            </div>
     </header>
     
             <section class="hero">
@@ -27,7 +30,8 @@
                     <h1>Travel. Curated by Insiders. Shared by Members.</h1>
                     <p class="luxury-text">Bario is an invite-only social platform for trusted, high-quality travel recommendations—connecting like-minded travelers through authentic experiences, exclusive perks, and a private global community.</p>
                     <p class="luxury-text" style="margin-top: 1rem;">We believe in meaningful travel—not just visiting a place but experiencing it the way locals do. Whether you're searching for hidden gems, unique activities, top-rated dining, or exclusive retreats, Bario ensures you have access to the most desirable travel recommendations at your fingertips.</p>
-                    <button style="margin-top: 3rem;">Apply for Membership</button>
+                    <button style="margin-top: 3rem;" id="membership">Pre-launch List</button>
+                    <!-- <button style="margin-top: 3rem;" id="partnership">Apply for Membership</button> -->
                 </div>
                 <div class="hero-image fade-in"></div>
             </section>
@@ -191,8 +195,10 @@
            <section class="waitlist fade-in">
         <div class="form-container">
             <h2 style="font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 2rem; font-weight: 400;">Join Bario</h2>
-            <p class="luxury-text" style="color: #DDD;">Join a global community of discerning travelers. Gain access to exclusive recommendations, private events, and curated experiences—all shared by like-minded explorers who believe in meaningful travel.</p>
-           <div class="application-tabs">
+            <!-- <p class="luxury-text" style="color: #DDD;">Member: Join a global community of discerning travelers. Gain access to exclusive recommendations, private events, and curated experiences—all shared by like-minded explorers who believe in meaningful travel.
+            <br><br>
+              Partner: Partner with Bario to connect with a private network of discerning travelers who seek authentic, high-quality experiences. Showcase your brand, offer exclusive perks and gain visibility while engaging with a community of tastemakers, explorers, and experience-seekers.</p> -->
+           <!-- <div class="application-tabs">
                 <button class="tab-btn active" onclick="showTab('member-tab')">Membership</button>
                 <button class="tab-btn" onclick="showTab('partner-tab')">Partnership</button>
             </div>
@@ -202,7 +208,9 @@
             </div>
             <div id="partner-tab" class="tab-content">
                <iframe data-tally-src="https://tally.so/embed/wgvNyK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2649" frameborder="0" marginheight="0" marginwidth="0" title="null"></iframe>
-            </div>
+            </div> -->
+            <iframe data-tally-src="https://tally.so/embed/mDaJlq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="412" frameborder="0" marginheight="0" marginwidth="0" title="Join our exclusive pre-launch list now!"></iframe>
+            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
             <div href="#" class="brand-badge">
                 <img src="./static/images/Prancheta 16.png" alt="Bario Club Logo" class="brand-badge-image">
             </div>
@@ -292,7 +300,8 @@
             function heroContentReveal() {
                 const heroTitle = document.querySelector('.hero h1');
                 const heroText = document.querySelector('.hero .luxury-text');
-                const heroButton = document.querySelector('.hero button');
+                const heroButton = document.querySelector('#membership');
+                const heroButton2 = document.querySelector('#partnership');
                 const heroImage = document.querySelector('.hero-image');
        
                 // Letter-by-letter reveal for title
@@ -343,6 +352,8 @@
                         setTimeout(() => {
                             heroButton.style.opacity = '1';
                             heroButton.style.transform = 'translateY(0)';
+                            heroButton2.style.opacity = '1';
+                            heroButton2.style.transform = 'translateY(0)';
                         }, 500);
                     }, 500);
                 }, 300);
