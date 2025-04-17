@@ -66,8 +66,13 @@
     font-family: var(--body-font);
       line-height: 1.2;
       color: var(--dark);
-      background-color: var(--dark);
+      /* background-color: var(--dark); */
       overflow-x: hidden;
+      background-color: var(--cream);
+  transition: background-color 0.3s ease;
+  }
+  #section-transition-overlay {
+    transition: opacity 0.3s ease;
   }
 
   ::placeholder {
@@ -102,7 +107,7 @@
   }
 
   header.scrolled {
-      padding: 1rem 4rem;
+      padding: 0.5rem 4rem;
       /* background: rgba(255, 255, 255, 0.95); */
       background: var(--primary-pink);
       box-shadow: 0 2px 20px rgba(0,0,0,0.05);
@@ -226,7 +231,7 @@
 
   /* Button Styles */
   button {
-      padding: 1.8rem 4rem;
+      padding: 1.4rem 4rem;
       background: var(--dark-green);
       border: none;
       color: var(--cream);
@@ -268,6 +273,7 @@
       transition: var(--transition);
       filter: grayscale(0.3);
   }
+
 
   .service-image1 {
       height: 100%;
@@ -377,9 +383,9 @@
   .about {
       grid-column: 1 / -1;
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 6rem;
-      padding: 4rem;
+      grid-template-columns: 6fr 5fr;
+      gap: 2rem;
+      padding: 4rem 4rem 20rem 4rem;
       background: var(--cream);
       position: relative;
       margin: 0rem 0;
@@ -475,8 +481,6 @@
       padding-left: 2rem;
   }
 
-
-
   .retreat-content p.luxury-text {
     color:var(--primary-pink);
   }
@@ -566,8 +570,6 @@ grid-template-columns: repeat(1, 2fr);
 .full-width {
 width: 100%;
 }
-
-
 
 .pattern {
     position: relative;
@@ -659,7 +661,9 @@ iframe {
     transition: opacity 0.8s ease, transform 0.8s ease;
     max-width: 500px;
   }
-
+  .bario-text-content2 { 
+    max-width: 40%;
+  }
   
   .bario-slide.visible .bario-text-content, .bario-slide2.visible .bario-text-content2 {
     opacity: 1;
@@ -721,11 +725,10 @@ iframe {
     background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),url('../images/susnet-cyclades.jpg');
     width:45%;
     height:100%;
-
     margin-left:5%;
   }
   .bario-image-c {
-    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),url('../images/water.jpg');
+    background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)),url('../images/water.png');
     width:45%;
     height:100%;
 
@@ -744,10 +747,105 @@ iframe {
   .bario-image-4 {
     background-image: linear-gradient(rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url('../images/connections.png');
   }
+
+  /* Customize the Tally overlay */
+  .tally-popup-overlay {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Darker background */
+  }
+  .social-badge-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .social-badge-placeholder {
+    width: 40px; /* Same width as the Instagram icon for balance */
+  }
+  
+  .brand-badge {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-badge {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .social-badge a {
+    color: var(--primary-pink);
+    font-size: 2rem;
+    transition: var(--transition);
+  }
+  
+  .social-badge a:hover {
+    color: var(--cream-dark);
+    transform: scale(1.1);
+  }
+  /* Animation base styles */
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation classes that will be applied via JavaScript */
+.animate-from-left {
+  animation: slideFromLeft 0.8s ease-out forwards;
+}
+
+.animate-from-right {
+  animation: slideFromRight 0.8s ease-out forwards;
+}
+
+.animate-from-bottom {
+  animation: slideFromBottom 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
   /* Responsive Design */
   @media (max-width: 1200px) {
-      
-
       .hero {
           grid-template-columns: 1fr;
           padding: 11rem 2rem 2rem;
@@ -766,8 +864,6 @@ iframe {
       }
 
   }
-
-   
 
   @media (max-width: 1100px) {
       .about {
@@ -827,7 +923,7 @@ iframe {
           height: 210px;
       }
       .about{
-          padding: 4rem 2rem;
+        padding: 4rem 2rem 15rem 2rem;
       }
       .form-row {
           flex-direction: column;
@@ -844,17 +940,12 @@ iframe {
       }
   }
 
-
-
-
-
 /* Media query for responsive design */
 @media (max-width: 768px) {
     .tally-embed iframe {
         min-height: 800px; /* Mobile forms need more height */
     }
 }
-
   
   /* Only adjust text sizing for mobile but keep the EXACT same layout structure */
   @media (max-width: 768px) {
@@ -895,7 +986,7 @@ iframe {
     }
     .bario-image-layer{ 
       width:80%;
-      filter: brightness(0.8);
+      filter: brightness(1.2);
   }
     .bario-text-content2, .bario-text-content {
         transform: translateY(25vh)!important;
@@ -903,12 +994,228 @@ iframe {
     .bario-slide2, .bario-slide {
         flex-direction: column;
     }
-
+    .tally-popup-container {
+      width: 90% !important;
+      max-width: 90% !important;
+    }
   }
 
-  @media (max-width: 400px) {
-    .service-image1{
-        height: 110px;
-    }
-}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .social-badge-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0;
+  }
   
+  .social-badge-placeholder {
+      display: none; /* Hide the placeholder on mobile */
+  }
+  
+  .social-badge {
+      justify-content: center; /* Center the Instagram icon */
+  }
+  
+  .social-badge a {
+      font-size: 1.8rem;
+  }
+  .who-we-are-content {
+    text-align: left;
+}
+  /* General horizontal scroll container adjustments */
+  .bario-parallax-wrapper,
+  .bario-parallax-wrapper2 {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .bario-scroll-container,
+  .bario-scroll-container2 {
+    height: auto;
+    position: static;
+  }
+  
+  .bario-sticky-container,
+  .bario-sticky-container2 {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .bario-horizontal-scroll-section,
+  .bario-horizontal-scroll-section2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Slide adjustments */
+  .bario-slide,
+  .bario-slide2 {
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+  }
+  
+  /* Text content */
+  .bario-text-content,
+  .bario-text-content2 {
+    opacity: 1;
+    transform: none !important;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    order: 1;
+  }
+  
+  /* Image adjustments */
+  .bario-image-layer,
+  .bario-image-layer2 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform: none;
+    right: auto;
+    top: auto;
+    margin: 1rem 0;
+    order: 2;
+    /* border-radius: 8px; */
+    overflow: hidden;
+  }
+  
+  /* Specific image adjustments */
+  .bario-image-1,
+  .bario-image-4,
+  .bario-image-a,
+  .bario-image-b,
+  .bario-image-c {
+    width: 80%;
+    margin-left: 0;
+    right: 0;
+  }
+
+  .bario-image-2{
+    width: 60%;
+    margin-left: 0;
+    right: 15%;
+  }
+  .bario-image-3{
+    width: 60%;
+    margin-left: 0;
+    left: 10%;
+  }
+  
+  /* Reset transform for all visible elements */
+  .bario-slide.visible .bario-image-layer,
+  .bario-slide2.visible .bario-image-layer2 {
+    transform: none;
+  }
+  
+  /* Retreat section mobile adjustments */
+  .retreat {
+    padding: 4rem 2rem;
+  }
+  
+  .retreat-content {
+    width: 100%;
+  }
+  
+  .retreat-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .retreat-item {
+    padding-left: 1.5rem;
+  }
+  
+  /* Fix background for Why Join sections */
+  .bario-background-layer,
+  .bario-background-layer2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .bario-background-layer2 {
+    opacity:0.3%;
+  }
+  .bario-image-layer,
+  .bario-image-layer2 {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: transform, opacity;
+  }
+  
+  .bario-slide.visible .bario-image-layer,
+  .bario-slide2.visible .bario-image-layer2 {
+    transform: none;
+    transition: none;
+  }
+  
+  /* Enhanced retreat item styles for animation */
+  .retreat-item {
+    transition: all 0.8s ease;
+    will-change: transform, opacity;
+  }
+}
+
+/* Slightly larger mobile device adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .bario-image-layer,
+  .bario-image-layer2 {
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .service-image1{
+      height: 110px;
+  }
+}
+
+/* Add these to your existing CSS */
+
+/* Ensure body has a transition for background-color */
+body {
+  transition: background-color 0.5s ease;
+}
+
+/* Make all sections transparent by default to let body color show through */
+.about, .bario-parallax-wrapper {
+  transition: background-color 0.5s ease;
+}
+
+/* When in dark mode, make sections transparent */
+.dark-mode-active {
+  background-color: transparent !important;
+}
+
+/* Ensure text remains visible during transitions */
+.about.fade-in.dark-mode-active .luxury-text {
+  color: var(--cream) !important;
+}
+
+.about.fade-in.dark-mode-active .section-title {
+  color: var(--gold) !important;
+}
+
+/* Fade overlay for transition effects (optional) */
+#section-transition-overlay {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}

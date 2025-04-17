@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <!-- Preloaded Tally Script -->
+    <script>
+        var dd=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():dd.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(dd.querySelector('script[src="'+w+'"]')==null){var s=dd.createElement("script");s.src=w,s.onload=v,s.onerror=v,dd.body.appendChild(s);}
+    </script>
     <title>Bario - Exclusive Travel Experiences</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="static/css/styles.css" rel="stylesheet"><!DOCTYPE html>
@@ -10,8 +15,6 @@
     <link rel="icon" href="static/images/Bario-Logo-Rounded.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-    <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
     <body>
         <div class="grid-container">
@@ -54,7 +57,7 @@
                     <p class="luxury-text">As their travels took them from Europe to South America, Asia to the Middle East, they realized the same need kept coming up: a trusted way to discover local favorites through real people, not algorithms.</p>
                     <p class="luxury-text" style="margin-top: 2rem;">Fast forward to last year, they decided to turn this idea into something real: a private community of like-minded travelers, designed to connect, share knowledge, and elevate each other's experiences.</p>
                     <p class="luxury-text" style="margin-top: 2rem;">And so, Bario was born—a members-only travel platform built by travelers, for travelers.</p>
-                </div>
+                  </div>
             </section>
            
              <div class="bario-parallax-wrapper">
@@ -211,9 +214,17 @@
             </div> -->
             <iframe data-tally-src="https://tally.so/embed/mDaJlq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="412" frameborder="0" marginheight="0" marginwidth="0" title="Join our exclusive pre-launch list now!"></iframe>
             <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-            <div href="#" class="brand-badge">
-                <img src="./static/images/Prancheta 16.png" alt="Bario Club Logo" class="brand-badge-image">
-            </div>
+            <div class="social-badge-container">
+              <div class="social-badge-placeholder"></div>
+              <div href="#" class="brand-badge">
+                  <img src="./static/images/Prancheta 16.png" alt="Bario Club Logo" class="brand-badge-image">
+              </div>
+              <div class="social-badge">
+                  <a href="https://www.instagram.com/bario.club/" target="_blank" rel="noopener noreferrer">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
         </div>
     </section>
     <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario | All rights reserved.</p></div>
@@ -391,216 +402,227 @@
             }
         }
        </script>
-       <script>
-        // Improved script for BARIO parallax with better mobile support
+      <script>
+        // Add this to your JavaScript file
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to check if elements are loaded and initialize
-    function initBarioParallax() {
-      // Get elements
-      const container = document.querySelector('.bario-horizontal-scroll-section');
-      const slides = document.querySelectorAll('.bario-slide');
+  // Get all elements we need to work with
+  const paralaxWrappers = document.querySelectorAll('.bario-parallax-wrapper, .bario-parallax-wrapper2');
+  const horizontalSections = document.querySelectorAll('.bario-horizontal-scroll-section, .bario-horizontal-scroll-section2');
+  const slides = document.querySelectorAll('.bario-slide, .bario-slide2');
+  
+  // Check if we're on mobile
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+  
+  // Initialize all slides as visible on mobile
+  function initMobileLayout() {
+    if (isMobile()) {
+      slides.forEach(slide => {
+        slide.classList.add('visible');
+      });
+    }
+  }
+  
+  // Handle scroll animation only on desktop
+  function handleScroll() {
+    if (!isMobile()) {
+      // Your existing scroll handling code here
+      
+      // For the first horizontal scroll section
       const scrollContainer = document.querySelector('.bario-scroll-container');
-      
-      if (!container || !slides.length || !scrollContainer) {
-        console.error('BARIO Parallax: Required elements not found');
-        return;
-      }
-      
-      // Make first slide visible initially
-      slides[0].classList.add('visible');
-      
-      // Function to calculate dimensions and values
-      function calculateDimensions() {
-        // Calculate values
-        const containerWidth = container.getBoundingClientRect().width;
+      if (scrollContainer) {
+        const horizontalSection = document.querySelector('.bario-horizontal-scroll-section');
+        const scrollAmount = (window.scrollY - scrollContainer.offsetTop) / (scrollContainer.offsetHeight - window.innerHeight);
         const slideWidth = window.innerWidth;
-        const totalDistance = containerWidth - slideWidth;
-        const scrollHeight = scrollContainer.getBoundingClientRect().height;
         
-        return {
-          containerWidth,
-          slideWidth,
-          totalDistance,
-          scrollHeight
-        };
-      }
-      
-      // Get initial dimensions
-      let dims = calculateDimensions();
-      
-      // Function to update on scroll
-      function updateOnScroll() {
-        // Get the scroll position relative to the scroll container
-        const rect = scrollContainer.getBoundingClientRect();
-        
-        // Only apply scroll effects if the section is in view
-        if (rect.top <= 0 && rect.bottom >= 0) {
-          // Calculate scroll progress (0 to 1)
-          const scrollProgress = Math.min(
-            Math.max(Math.abs(rect.top) / (dims.scrollHeight - window.innerHeight), 0),
-            1
-          );
+        if (horizontalSection && scrollAmount >= 0 && scrollAmount <= 1) {
+          horizontalSection.style.transform = `translateX(-${scrollAmount * (slideWidth * 3)}px)`;
           
-          // Calculate horizontal scroll position
-          const horizontalScroll = Math.min(dims.totalDistance * scrollProgress, dims.totalDistance);
-          
-          // Apply transform to move horizontally
-          container.style.transform = `translateX(-${horizontalScroll}px)`;
-          
-          // Determine which slide is visible based on scroll position
-          const currentSlideIndex = Math.min(
-            Math.floor((horizontalScroll / dims.totalDistance) * slides.length),
-            slides.length - 1
-          );
-          
-          // Add visible class to current slide
+          // Handle slide visibility
+          const slides = document.querySelectorAll('.bario-slide');
           slides.forEach((slide, index) => {
-            if (index === currentSlideIndex) {
+            const threshold = index / (slides.length - 1);
+            const nextThreshold = (index + 1) / (slides.length - 1);
+            
+            if (scrollAmount >= threshold - 0.1 && scrollAmount <= nextThreshold + 0.1) {
               slide.classList.add('visible');
-            } else if (Math.abs(index - currentSlideIndex) > 1) {
+            } else {
               slide.classList.remove('visible');
             }
           });
-          
-          // Make next slide visible during transition
-          if (currentSlideIndex < slides.length - 1) {
-            const nextSlideThreshold = (currentSlideIndex + 0.8) / slides.length;
-            if (scrollProgress > nextSlideThreshold) {
-              slides[currentSlideIndex + 1].classList.add('visible');
-            }
-          }
         }
       }
       
-      // Initial update
-      updateOnScroll();
-      
-      // Add scroll event listener
-      window.addEventListener('scroll', updateOnScroll);
-      
-      // Add resize event listener with debounce
-      let resizeTimeout;
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-          // Recalculate dimensions on resize
-          dims = calculateDimensions();
-          updateOnScroll();
-        }, 250);
+      // For the second horizontal scroll section
+      const scrollContainer2 = document.querySelector('.bario-scroll-container2');
+      if (scrollContainer2) {
+        const horizontalSection2 = document.querySelector('.bario-horizontal-scroll-section2');
+        const scrollAmount2 = (window.scrollY - scrollContainer2.offsetTop) / (scrollContainer2.offsetHeight - window.innerHeight);
+        const slideWidth2 = window.innerWidth;
+        
+        if (horizontalSection2 && scrollAmount2 >= 0 && scrollAmount2 <= 1) {
+          horizontalSection2.style.transform = `translateX(-${scrollAmount2 * (slideWidth2 * 2)}px)`;
+          
+          // Handle slide visibility
+          const slides2 = document.querySelectorAll('.bario-slide2');
+          slides2.forEach((slide, index) => {
+            const threshold = index / (slides2.length - 1);
+            const nextThreshold = (index + 1) / (slides2.length - 1);
+            
+            if (scrollAmount2 >= threshold - 0.1 && scrollAmount2 <= nextThreshold + 0.1) {
+              slide.classList.add('visible');
+            } else {
+              slide.classList.remove('visible');
+            }
+          });
+        }
+      }
+    }
+  }
+  
+  // Reset transforms on resize
+  function handleResize() {
+    if (isMobile()) {
+      // Reset any transform styles on horizontal sections
+      horizontalSections.forEach(section => {
+        section.style.transform = 'none';
       });
       
-      console.log('BARIO Parallax: Initialized successfully');
+      // Make all slides visible
+      slides.forEach(slide => {
+        slide.classList.add('visible');
+      });
+    } else {
+      // Re-trigger scroll handler to position correctly
+      handleScroll();
     }
+  }
   
-    // Run initialization
-    initBarioParallax();
-  });
-       </script>
+  // Set up event listeners
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleResize);
+  
+  // Initialize mobile layout if needed
+  initMobileLayout();
+  handleResize();
+});
+      </script>
        <script>
-        // Improved script for BARIO parallax with better mobile support
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to check if elements are loaded and initialize
-    function initBarioParallax() {
-      // Get elements
-      const container = document.querySelector('.bario-horizontal-scroll-section2');
-      const slides = document.querySelectorAll('.bario-slide2');
-      const scrollContainer = document.querySelector('.bario-scroll-container2');
-      
-      if (!container || !slides.length || !scrollContainer) {
-        console.error('BARIO Parallax: Required elements not found');
-        return;
-      }
-      
-      // Make first slide visible initially
-      slides[0].classList.add('visible');
-      
-      // Function to calculate dimensions and values
-      function calculateDimensions() {
-        // Calculate values
-        const containerWidth = container.getBoundingClientRect().width;
-        const slideWidth = window.innerWidth;
-        const totalDistance = containerWidth - slideWidth;
-        const scrollHeight = scrollContainer.getBoundingClientRect().height;
-        
-        return {
-          containerWidth,
-          slideWidth,
-          totalDistance,
-          scrollHeight
-        };
-      }
-      
-      // Get initial dimensions
-      let dims = calculateDimensions();
-      
-      // Function to update on scroll
-      function updateOnScroll() {
-        // Get the scroll position relative to the scroll container
-        const rect = scrollContainer.getBoundingClientRect();
-        
-        // Only apply scroll effects if the section is in view
-        if (rect.top <= 0 && rect.bottom >= 0) {
-          // Calculate scroll progress (0 to 1)
-          const scrollProgress = Math.min(
-            Math.max(Math.abs(rect.top) / (dims.scrollHeight - window.innerHeight), 0),
-            1
-          );
-          
-          // Calculate horizontal scroll position
-          const horizontalScroll = Math.min(dims.totalDistance * scrollProgress, dims.totalDistance);
-          
-          // Apply transform to move horizontally
-          container.style.transform = `translateX(-${horizontalScroll}px)`;
-          
-          // Determine which slide is visible based on scroll position
-          const currentSlideIndex = Math.min(
-            Math.floor((horizontalScroll / dims.totalDistance) * slides.length),
-            slides.length - 1
-          );
-          
-          // Add visible class to current slide
-          slides.forEach((slide, index) => {
-            if (index === currentSlideIndex) {
-              slide.classList.add('visible');
-            } else if (Math.abs(index - currentSlideIndex) > 1) {
-              slide.classList.remove('visible');
-            }
-          });
-          
-          // Make next slide visible during transition
-          if (currentSlideIndex < slides.length - 1) {
-            const nextSlideThreshold = (currentSlideIndex + 0.8) / slides.length;
-            if (scrollProgress > nextSlideThreshold) {
-              slides[currentSlideIndex + 1].classList.add('visible');
+        document.addEventListener('DOMContentLoaded', function() {
+          // Function to show the Tally popup
+          function openTallyPopup() {
+            if (typeof Tally !== 'undefined') {
+              Tally.openPopup('mDaJlq', {
+                width: 660,
+                emoji: {
+                  text: '👋',
+                  animation: 'wave'
+                },
+                autoClose: false,
+                hideTitle: false,
+                overlay: true,
+                layout: 'modal'
+              });
+              
+              setTimeout(() => {
+                const tallyOverlay = document.querySelector('.tally-overlay');
+                if (tallyOverlay) {
+                  tallyOverlay.classList.add('tally-popup-overlay');
+                }
+                
+                const tallyPopup = document.querySelector('.tally-popup');
+                if (tallyPopup) {
+                  tallyPopup.classList.add('tally-popup-container');
+                }
+              }, 100);
+            } else {
+              // If Tally isn't loaded yet, try again in 500ms
+              setTimeout(openTallyPopup, 500);
             }
           }
+      
+          // Function to check if popup was already shown (using cookies)
+          function hasPopupBeenShown() {
+            return document.cookie.split(';').some((item) => item.trim().startsWith('barioPopupShown='));
+          }
+      
+          // Show popup after a delay (only if not shown before)
+          if (!hasPopupBeenShown()) {
+            // Wait 2 seconds before showing the popup
+            setTimeout(function() {
+              openTallyPopup();
+              // Set cookie to remember that popup was shown (expires after 1 day)
+              document.cookie = "barioPopupShown=true; max-age=86400; path=/";
+            }, 2000);
+          }
+        });
+      </script>
+      <script>
+        // Script to handle smooth background color transitions between sections
+document.addEventListener('DOMContentLoaded', function() {
+  // Set transition on body for smooth color changes
+  document.body.style.transition = 'background-color 0.5s ease';
+  
+  // Get the sections we want to observe
+  const aboutSection = document.querySelector('.about');
+  const darkSection = document.querySelector('.bario-parallax-wrapper'); // Assuming this is the "Why Join Bario" section
+  
+  // Get sections for reference
+  const allSections = document.querySelectorAll('.about, .bario-parallax-wrapper');
+  
+  // Create an intersection observer
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // When the dark section starts becoming visible
+      if (entry.target === darkSection) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.005) {
+          // Change the entire page background when dark section becomes ~15% visible
+          document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+          document.body.classList.add('dark-mode');
+          
+          // Optional: Add classes to all sections for consistent color scheme
+          allSections.forEach(section => {
+            section.classList.add('dark-mode-active');
+          });
+        } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+          // Change back to light mode when the dark section is scrolled up and out of view
+          document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cream');
+          document.body.classList.remove('dark-mode');
+          
+          // Optional: Remove classes from all sections
+          allSections.forEach(section => {
+            section.classList.remove('dark-mode-active');
+          });
         }
       }
-      
-      // Initial update
-      updateOnScroll();
-      
-      // Add scroll event listener
-      window.addEventListener('scroll', updateOnScroll);
-      
-      // Add resize event listener with debounce
-      let resizeTimeout;
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-          // Recalculate dimensions on resize
-          dims = calculateDimensions();
-          updateOnScroll();
-        }, 250);
-      });
-      
-      console.log('BARIO Parallax: Initialized successfully');
-    }
-  
-    // Run initialization
-    initBarioParallax();
+    });
+  }, {
+    threshold: [0, 0.15, 0.3, 0.5, 0.7, 1], // Observe at different visibility thresholds
+    rootMargin: '0px 0px 45% 0px'  // Adjust the trigger point (negative bottom margin makes it trigger earlier)
   });
-       </script>
-       <script>var dd=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():dd.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(dd.querySelector('script[src="'+w+'"]')==null){var s=dd.createElement("script");s.src=w,s.onload=v,s.onerror=v,dd.body.appendChild(s);}</script>
+  
+  // Start observing the dark section
+  if (darkSection) {
+    sectionObserver.observe(darkSection);
+  }
+  
+  // Create a section transition overlay div for additional effects (optional)
+  const transitionOverlay = document.createElement('div');
+  transitionOverlay.id = 'section-transition-overlay';
+  transitionOverlay.style.position = 'fixed';
+  transitionOverlay.style.top = '0';
+  transitionOverlay.style.left = '0';
+  transitionOverlay.style.width = '100%';
+  transitionOverlay.style.height = '100%';
+  transitionOverlay.style.pointerEvents = 'none';
+  transitionOverlay.style.opacity = '0';
+  transitionOverlay.style.zIndex = '999';
+  document.body.appendChild(transitionOverlay);
+
+
+});
+      </script>
+
     </body>
     </html>
