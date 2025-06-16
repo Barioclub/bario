@@ -87,8 +87,8 @@
         <div class="guides-grid">
                     <!-- Cyclades Guide -->
                     <div class="guide-card fade-in">
-                        <div class="guide-image cyclades" onclick="openGuidePreview('cyclades', 'Cyclades Escape', 28.99)">
-                            <div class="price-tag">£28.99</div>
+                        <div class="guide-image cyclades" onclick="openGuidePreview('cyclades', 'Cyclades Escape', 12.99)">
+                            <div class="price-tag">12.99€</div>
                         </div>
                         <div class="guide-content">
                             <h3 class="guide-title">Cyclades Escape</h3>
@@ -104,7 +104,7 @@
                             </div>
                             <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
                             <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_CYCLADES_LINK" class="buy-now-btn" target="_blank">
-                                <i class="fas fa-credit-card"></i> Buy Now - £28.99
+                                <i class="fas fa-credit-card"></i> Buy Now - 12.99€
                             </button>
                             <button class="add-to-basket-btn" onclick="addToBasket('cyclades', 'Cyclades Escape', 28.99)">
                                 <i class="fas fa-plus"></i>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="buy-now-btn" onclick="purchaseGuide()">Buy Full Guide - £<span id="modalPrice">24.99</span></button>
+                    <button class="buy-now-btn" onclick="purchaseGuide()">Buy Full Guide - €<span id="modalPrice">24.99</span></button>
                 </div>
                 </div>
             </div>
@@ -278,8 +278,12 @@
     <div class="success-message" id="successMessage">
         Guide added to basket!
     </div>
-    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario | All rights reserved.</p></div>
+    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario Club Limited | All rights reserved.</p></div>
     <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+      
         let currentGuide = {};
         
         function openGuidePreview(guideId, title, price) {

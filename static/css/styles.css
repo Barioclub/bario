@@ -1638,7 +1638,7 @@ button.remove-item:hover {
   max-height: 70vh;
   object-fit: contain;
   background: var(--dark);
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .preview-overlay {
