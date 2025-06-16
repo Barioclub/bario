@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Standard Meta Tags -->
+      <meta name="title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta name="description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+  
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta property="og:description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+      <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+      <meta property="og:url" content="https://barioclub.com">
+      <meta property="og:site_name" content="Bario">
+  
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta name="twitter:description" content="Discover hidden travel gems and exclusive recommendations on Bario, a private travel community for meaningful, local-style exploration.">
+      <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+      <meta name="twitter:site" content="@yourtwitterhandle">
+  <script src="../script/script.js"></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+      <!-- <meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self'; 
+             script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; 
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+             font-src https://fonts.gstatic.com;
+             img-src 'self' data: https://images.unsplash.com https://via.placeholder.com;"> -->
+  <title>Digital Travel Guides - Bario</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body style=" background-color: var(--dark-green);">
+    <!-- Header -->
+    <header id="header">
+      <a href="/" class="logo">
+        <img src="../static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
+    </a>
+        <!-- <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/travel-guides">Travel Guides</a>
+            <div class="basket-icon" onclick="toggleBasket()">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="basket-count" id="basketCount">0</span>
+            </div>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> -->
+
+        <div class="nav-right">
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/travel-guides" class="active">Travel Guides</a>
+            </div>
+            
+            <div class="basket-icon" onclick="toggleBasket()">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="basket-count" id="basketCount">0</span>
+            </div>
+    
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero2">
+        <div class="hero-content2 fade-in">
+            <h1>Digital Travel Guides</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="guides-grid">
+                    <!-- Cyclades Guide -->
+                    <div class="guide-card fade-in">
+                        <div class="guide-image cyclades" onclick="openGuidePreview('cyclades', 'Cyclades Escape', 28.99)">
+                            <div class="price-tag">£28.99</div>
+                        </div>
+                        <div class="guide-content">
+                            <h3 class="guide-title">Cyclades Escape</h3>
+                            <p class="guide-description">Island-hop through the Cyclades with confidence, discovering secluded beaches, family-run tavernas, and breathtaking sunset spots.</p>
+                            <div class="guide-features">
+                                <ul>
+                                    <li>Island-by-Island Guide</li>
+                                    <li>Secret Beaches & Coves</li>
+                                    <li>Local Family Tavernas</li>
+                                    <li>Best Sunset Locations</li>
+                                    <li>Ferry Routes & Tips</li>
+                                </ul>
+                            </div>
+                            <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
+                            <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_CYCLADES_LINK" class="buy-now-btn" target="_blank">
+                                <i class="fas fa-credit-card"></i> Buy Now - £28.99
+                            </button>
+                            <button class="add-to-basket-btn" onclick="addToBasket('cyclades', 'Cyclades Escape', 28.99)">
+                                <i class="fas fa-plus"></i>
+                                Add to Basket
+                            </button>
+                        </div>
+                    </div>    
+            <!-- London Guide -->
+            <div class="guide-card fade-in">
+                <div class="guide-image london" onclick="openGuidePreview('london', 'London Insider', 24.99)">
+                    <div class="price-tag">Coming Soon</div>
+                </div>
+                <div class="guide-content">
+                    <h3 class="guide-title">London Insider</h3>
+                    <p class="guide-description">From hidden speakeasies in Shoreditch to secret gardens in Kensington, discover London through the eyes of those who call it home.</p>
+                    <div class="guide-features">
+                        <ul>
+                            <li>50+ Local Recommendations</li>
+                            <li>Interactive Map & Routes</li>
+                            <li>Exclusive Member Discounts</li>
+                            <li>Hidden Neighborhood Gems</li>
+                            <li>Local Food & Drink Scene</li>
+                        </ul>
+                    </div>
+                    <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
+                    <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_LONDON_LINK" class="buy-now-btn" target="_blank" disabled>
+                        <i class="fas fa-credit-card"></i> Buy Now
+                    </button>
+                    <button class="add-to-basket-btn" onclick="addToBasket('london', 'London Insider', 24.99)" disabled>
+                        <i class="fas fa-plus"></i>
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+            <!-- Modal Overlay -->
+            <div id="guideModal" class="modal-overlay">
+                <div class="modal-content">
+                <span class="close-btn" onclick="closeGuidePreview()">&times;</span>
+                <div class="preview-header">
+                    <h2 id="modalTitle">London Insider</h2>
+                    <div class="preview-badge">PREVIEW</div>
+                </div>
+                <div class="preview-content">
+                    <div class="pdf-preview">
+                      <img id="previewImage" src="" alt="Guide Preview" />
+                      <div class="preview-overlay">
+                        <div class="unlock-message">
+                          <h4>Unlock Full Guide</h4>
+                          <p>Purchase to access all pages and exclusive content</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="buy-now-btn" onclick="purchaseGuide()">Buy Full Guide - £<span id="modalPrice">24.99</span></button>
+                </div>
+                </div>
+            </div>
+            <!-- Athens Guide -->
+            <div class="guide-card fade-in">
+                <div class="guide-image athens" onclick="openGuidePreview('athens', 'Athens Unveiled', 22.99)">
+                    <div class="price-tag">Coming Soon</div>
+                </div>
+                <div class="guide-content">
+                    <h3 class="guide-title">Athens Unveiled</h3>
+                    <p class="guide-description">Beyond the Acropolis lies a vibrant city of rooftop bars, traditional tavernas, and contemporary art spaces waiting to be explored.</p>
+                    <div class="guide-features">
+                        <ul>
+                            <li>40+ Authentic Experiences</li>
+                            <li>Historical & Modern Athens</li>
+                            <li>Best Rooftop Views</li>
+                            <li>Traditional & Modern Cuisine</li>
+                            <li>Art & Culture Hotspots</li>
+                        </ul>
+                    </div>
+                    <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
+                    <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_ATHENS_LINK" class="buy-now-btn" target="_blank" disabled>
+                        <i class="fas fa-credit-card"></i> Buy Now
+                    </button>
+                    <button class="add-to-basket-btn" onclick="addToBasket('athens', 'Athens Unveiled', 22.99)" disabled>
+                        <i class="fas fa-plus"></i>
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+
+            <!-- Paris Guide -->
+            <div class="guide-card fade-in">
+                <div class="guide-image paris" onclick="openGuidePreview('paris', 'Paris Secrets', 26.99)">
+                    <div class="price-tag">Coming Soon</div>
+                </div>
+                <div class="guide-content">
+                    <h3 class="guide-title">Paris Secrets</h3>
+                    <p class="guide-description">Experience Paris like a true Parisien with insider access to the city's most coveted restaurants, boutiques, and cultural experiences.</p>
+                    <div class="guide-features">
+                        <ul>
+                            <li>60+ Exclusive Recommendations</li>
+                            <li>Hidden Cafés & Bistros</li>
+                            <li>Secret Shopping Districts</li>
+                            <li>Local Art Galleries</li>
+                            <li>Romantic Hidden Spots</li>
+                        </ul>
+                    </div>
+                    <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
+                    <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_PARIS_LINK" class="buy-now-btn" target="_blank" disabled>
+                        <i class="fas fa-credit-card"></i> Buy Now
+                    </button>
+                    <button class="add-to-basket-btn" onclick="addToBasket('paris', 'Paris Secrets', 26.99)" disabled>
+                        <i class="fas fa-plus"></i>
+                        Add to Basket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+        <!-- Payment Security Section -->
+        <section class="payment-info">
+          <h2>Secure & Simple Payments</h2>
+          <p>Your purchases are protected by industry-leading security. Download links are sent instantly to your email after payment.</p>
+          <div class="security-badges">
+              <div class="security-badge">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>SSL Encrypted</span>
+              </div>
+              <div class="security-badge">
+                  <i class="fas fa-lock"></i>
+                  <span>Stripe Secure</span>
+              </div>
+              <div class="security-badge">
+                  <i class="fas fa-download"></i>
+                  <span>Instant Download</span>
+              </div>
+              <div class="security-badge">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email Delivery</span>
+              </div>
+          </div>
+      </section>
+    <!-- Basket Overlay -->
+    <div class="basket-overlay" onclick="toggleBasket()"></div>
+
+    <!-- Basket Sidebar -->
+    <div class="basket-sidebar" id="basketSidebar">
+        <div class="basket-header">
+            <h3 class="basket-title">Your Basket</h3>
+            <button class="close-basket" onclick="toggleBasket()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="basket-items" id="basketItems">
+            <div class="empty-basket">
+                <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                <p>Your basket is empty</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+            </div>
+        </div>
+
+        <div class="basket-footer" id="basketFooter" style="display: none;">
+            <div class="basket-total">
+                <span>Total:</span>
+                <span id="basketTotal">£0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
+                <i class="fas fa-shopping-cart"></i> Buy All Items
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        Guide added to basket!
+    </div>
+    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario | All rights reserved.</p></div>
+    <script>
+        let currentGuide = {};
+        
+        function openGuidePreview(guideId, title, price) {
+            currentGuide = { id: guideId, title: title, price: price };
+            
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalPrice').textContent = price;
+            
+            // Set the preview image source based on guide ID
+            const previewImage = document.getElementById('previewImage');
+            
+            // Clear any previous error handlers to prevent loops
+            previewImage.onerror = null;
+            previewImage.onload = null;
+            
+           
+            // Use a simple gray placeholder
+            previewImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkd1aWRlIFByZXZpZXc8L3RleHQ+PC9zdmc+';
+            
+            // Then try to load the specific guide image
+            const specificImage = new Image();
+            specificImage.onload = function() {
+                previewImage.src = specificImage.src;
+            };
+            specificImage.onerror = function() {
+                // Keep the default image if specific one fails
+                console.log('Preview image not found for:', guideId);
+            };
+            specificImage.src = `../static/images/previews/${guideId}-preview.jpg`;
+            
+            document.getElementById('guideModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeGuidePreview() {
+            document.getElementById('guideModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function purchaseGuide() {
+            console.log('Purchasing guide:', currentGuide);
+            closeGuidePreview();
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('guideModal');
+            if (event.target === modal) {
+                closeGuidePreview();
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Enhanced scroll handling for header
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // Mobile menu functionality
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+            function toggleMobileMenu() {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            }
+
+            function closeMobileMenu() {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu when clicking on nav links
+            navLinks.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close mobile menu on window resize if it's open
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+        
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        
+                        // Fade in elements with 'fade-in' class
+                        if (target.classList.contains('fade-in')) {
+                            target.style.transform = 'translateY(0)';
+                            target.style.opacity = '1';
+                        }
+                        
+                        // Stop observing once animated
+                        revealObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+        
+            // Prepare all elements with 'fade-in' class for animation
+            const elementsToReveal = document.querySelectorAll('.fade-in');
+            
+            elementsToReveal.forEach(element => {
+                // Set initial hidden state
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px)';
+                element.style.transition = 'all 0.8s ease-out';
+                
+                // Start observing for scroll reveal
+                revealObserver.observe(element);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+
+                // Fade and Slide Animation for elements with fade-in class
+                if (target.classList.contains('fade-in')) {
+                    target.style.transform = 'translateY(0)';
+                    target.style.opacity = '1';
+                }
+
+                revealObserver.unobserve(target);
+            }
+        });
+    }, observerOptions);
+
+    // Find all elements with fade-in class and prepare them for animation
+    const elementsToReveal = document.querySelectorAll('.fade-in');
+
+    elementsToReveal.forEach(element => {
+        // Set initial state (hidden and slightly moved down)
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(50px)';
+        element.style.transition = 'all 0.8s ease-out';
+        
+        // Start observing the element
+        revealObserver.observe(element);
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // Letter-by-letter typing animation function
+    function revealLetterByLetter(element) {
+        const text = element.textContent;
+        element.textContent = '';
+        element.style.opacity = '1';
+        
+        let index = 0;
+        const revealInterval = setInterval(() => {
+            if (index < text.length) {
+                element.textContent += text[index];
+                index++;
+            } else {
+                clearInterval(revealInterval);
+            }
+        }, 30); // 30ms delay between each letter
+    }
+
+    const heroTitle = document.querySelector('.hero-content2 h1');
+    
+    if (heroTitle) {
+        // Set initial state
+        heroTitle.style.opacity = '0';
+        
+        // Start the typing animation after a short delay
+        setTimeout(() => {
+            // Fix the height to prevent layout shifts during typing
+            heroTitle.style.height = heroTitle.offsetHeight + 'px';
+            revealLetterByLetter(heroTitle);
+        }, 500); // 500ms delay before starting
+    }
+});
+    </script>
+</body>
+</html>

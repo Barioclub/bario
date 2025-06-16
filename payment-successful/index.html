@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Standard Meta Tags -->
+        <meta name="title" content="Bario | Curated Travel by Insiders, Shared by Members">
+        <meta name="description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+    
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+        <meta property="og:description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+        <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+        <meta property="og:url" content="https://barioclub.com">
+        <meta property="og:site_name" content="Bario">
+    
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+        <meta name="twitter:description" content="Discover hidden travel gems and exclusive recommendations on Bario, a private travel community for meaningful, local-style exploration.">
+        <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+  <script src="../script/script.js"></script>
+  <title>Payment Successful - Bario</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
+</head>
+<body class="payment-body">
+    <!-- Header -->
+    <header id="header">
+      <a href="/" class="logo">
+        <img src="../static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
+      </a>
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/travel-guides">Travel Guides</a>
+        </div>
+        
+        <div class="basket-icon" onclick="toggleBasket()">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="basket-count" id="basketCount">0</span>
+        </div>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero3">
+        <!-- <div class="hero-content3">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Payment Successful!</h1>
+            <p>Thank you for your purchase. Your travel guides are ready for download.</p>
+        </div> -->
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content-successful">
+        <div class="success-container">
+            <h1>Payment Successful!</h1>
+
+            <!-- Download Section -->
+            <div class="success-section">
+                <div class="success-card fade-in">
+                    <h2 class="section-subtitle">
+                        <i class="fas fa-download"></i>
+                        Your Travel Guides
+                    </h2>
+                    <p class="download-intro">Click the buttons below to download your guides. Download links are also being sent to your email.</p>
+                    
+                    <div class="download-items" id="downloadItems">
+                        <!-- Download items will be populated by JavaScript -->
+                    </div>
+
+                    <div class="download-note fade-in">
+                        <i class="fas fa-info-circle"></i>
+                        <p>We recommend downloading your guides now and saving them to your device.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Details -->
+            <div class="success-section fade-in">
+                <div class="success-card">
+                    <h2 class="section-subtitle">
+                        <i class="fas fa-receipt"></i>
+                        Order Details
+                    </h2>
+                    <div class="order-info">
+                        <div class="info-row">
+                            <span>Order Number:</span>
+                            <span id="orderNumber">#BR-2025-001234</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Date:</span>
+                            <span id="orderDate">June 8, 2025</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Email:</span>
+                            <span id="customerEmail">customer@example.com</span>
+                        </div>
+                        <div class="info-row total-row">
+                            <span>Total Paid:</span>
+                            <span id="totalPaid">£0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Next Steps -->
+            <div class="success-section">
+                <div class="success-card">
+                    <h2 class="section-subtitle fade-in">
+                        <i class="fas fa-compass"></i>
+                        What's Next?
+                    </h2>
+                    <div class="next-steps">
+                        <div class="step fade-in">
+                            <div class="step-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Save to Your Device</h4>
+                                <p>Download the guides to your phone or tablet for offline access during your travels.</p>
+                            </div>
+                        </div>
+                        <div class="step fade-in">
+                            <div class="step-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Plan Your Adventure</h4>
+                                <p>Browse through the recommendations and create your personalized itinerary.</p>
+                            </div>
+                        </div>
+                        <div class="step fade-in">
+                            <div class="step-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4>Share Your Experience</h4>
+                                <p>Tag us @bario.club on Instagram and share your discoveries with fellow travelers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Shopping -->
+            <div class="success-actions">
+                <button href="/travel-guides" class="action-btn primary">
+                    <i class="fas fa-plus"></i>
+                    Browse More Guides
+                </button>
+                <button href="/" class="action-btn secondary">
+                    <i class="fas fa-home"></i>
+                    Return to Home
+                </button>
+            </div>
+        </div>
+
+        <!-- Support Section -->
+    </main>
+    <section class="support-section">
+        <h2 class="section-subtitle">Need Help?</h2>
+        <p>If you have any issues with your downloads or need assistance, we're here to help.</p>
+        <div class="support-options">
+            <button href="mailto:members@barioclub.com" class="support-option">
+                <i class="fas fa-envelope"></i>
+                <span>Email Support</span>
+            </button>
+        </div>
+    </section>
+    <!-- Basket Overlay -->
+    <div class="basket-overlay" onclick="toggleBasket()"></div>
+
+    <!-- Basket Sidebar -->
+    <div class="basket-sidebar" id="basketSidebar">
+        <div class="basket-header">
+            <h3 class="basket-title">Your Basket</h3>
+            <button class="close-basket" onclick="toggleBasket()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="basket-items" id="basketItems">
+            <div class="empty-basket">
+                <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                <p>Your basket is empty</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+            </div>
+        </div>
+
+        <div class="basket-footer" id="basketFooter" style="display: none;">
+            <div class="basket-total">
+                <span>Total:</span>
+                <span id="basketTotal">£0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
+                <i class="fas fa-shopping-cart"></i> Buy All Items
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        Guide added to basket!
+    </div>
+    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario | All rights reserved.</p></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOrderDetails();
+            loadDownloadItems();
+            updateYear();
+            clearBasket();
+        });
+
+        function loadOrderDetails() {
+            // In a real implementation, this would come from the backend
+            const orderNumber = generateOrderNumber();
+            const orderDate = new Date().toLocaleDateString('en-GB', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            
+            document.getElementById('orderNumber').textContent = orderNumber;
+            document.getElementById('orderDate').textContent = orderDate;
+            
+        
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email') || 'customer@example.com';
+            const total = urlParams.get('total') || '0.00';
+            
+            document.getElementById('customerEmail').textContent = email;
+            document.getElementById('totalPaid').textContent = `£${total}`;
+        }
+
+        function loadDownloadItems() {
+            // In a real implementation, this would come from the backend based on the order
+            const purchasedItems = JSON.parse(localStorage.getItem('purchasedItems') || '[]');
+            const downloadItems = document.getElementById('downloadItems');
+
+            if (purchasedItems.length === 0) {
+                // Fallback - load from basket if no purchased items stored
+                const basket = JSON.parse(localStorage.getItem('basket') || '[]');
+                populateDownloads(basket);
+            } else {
+                populateDownloads(purchasedItems);
+            }
+        }
+
+        function populateDownloads(items) {
+            const downloadItems = document.getElementById('downloadItems');
+            let itemsHTML = '';
+
+            items.forEach(item => {
+                itemsHTML += `
+                    <div class="download-item">
+                        <div class="download-info">
+                            <h4>${item.name}</h4>
+                            <p class="download-format">PDF Format • 15-25 pages</p>
+                        </div>
+                        <button class="download-btn" onclick="downloadGuide('${item.id}', '${item.name}')">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </button>
+                    </div>
+                `;
+            });
+
+            downloadItems.innerHTML = itemsHTML;
+        }
+
+        function downloadGuide(guideId, guideName) {
+            // In a real implementation, this would trigger the actual download
+            // For now, we'll simulate it
+            const btn = event.target.closest('.download-btn');
+            const originalHTML = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Downloaded';
+                btn.classList.add('downloaded');
+                
+                // Here we would trigger the actual file download
+                // window.open(`/api/download/${guideId}`, '_blank');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    btn.classList.remove('downloaded');
+                }, 3000);
+            }, 2000);
+        }
+
+        function generateOrderNumber() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const random = Math.floor(Math.random() * 900000) + 100000;
+            return `#BR-${year}-${random}`;
+        }
+
+        function clearBasket() {
+            // Clear the basket after successful payment
+            localStorage.removeItem('basket');
+            updateBasketCount();
+        }
+
+        function updateBasketCount() {
+            document.getElementById('basketCount').textContent = '0';
+        }
+
+        function updateYear() {
+            document.getElementById('demo').textContent = new Date().getFullYear();
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Enhanced scroll handling for header
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // Mobile menu functionality
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+            function toggleMobileMenu() {
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            }
+
+            function closeMobileMenu() {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu when clicking on nav links
+            navLinks.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close mobile menu on window resize if it's open
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+        
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+        
+                        // Fade and Slide Animation for elements with fade-in class
+                        if (target.classList.contains('fade-in')) {
+                            target.style.transform = 'translateY(0)';
+                            target.style.opacity = '1';
+                        }
+        
+                        revealObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+        
+            // Find all elements with fade-in class and prepare them for animation
+            const elementsToReveal = document.querySelectorAll('.fade-in');
+        
+            elementsToReveal.forEach(element => {
+                // Set initial state (hidden and slightly moved down)
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px)';
+                element.style.transition = 'all 0.8s ease-out';
+                
+                // Start observing the element
+                revealObserver.observe(element);
+            });
+        });
+        </script>
+</body>
+</html>
