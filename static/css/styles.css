@@ -1229,7 +1229,7 @@ body {
 .guide-description {
   font-family: var(--body-font);
   font-size: 0.85rem;
-  color: var(--gold-dark);
+  color: var(--dark);
   line-height: 1.4;
   margin-bottom: 15px;
   position: relative;
