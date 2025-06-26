@@ -1524,6 +1524,7 @@ body {
       }
 
       /* Guide Images */
+      .ibiza { background-image: url('../images/ibiza.jpg'); }
       .london { background-image: url('../images/london2.png'); }
       .athens { background-image: url('../images/athens.png'); }
       .paris { background-image: url('../images/paris.png'); }
