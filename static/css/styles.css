@@ -244,6 +244,11 @@
       margin-bottom: 2rem;
       transition: var(--transition);
       filter: grayscale(0.3);
+      border: 5px solid var(--gold);
+      box-shadow: 
+      0 0 0 5px var(--primary-pink),                     /* middle border */
+      0 0 0 10px var(--gold);  
+      border-radius:100px;
   }
 
 
@@ -391,37 +396,57 @@
 
 
   /* Waitlist Section */
-  .waitlist {
-      grid-column: 1 / -1;
-      background: var(--dark-green);
-      color: var(--cream);
-      padding: 8rem;
-      position: relative;
-      overflow: hidden;
-  }
+
 
   .waitlist {
+    grid-column: 1 / -1;
+    /* background: var(--dark-green); */
+    color: var(--cream);
+    padding: 6rem;
+    position: relative;
+    overflow: hidden;
     padding-bottom: 2rem;
-  }
-
-  .waitlist::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(248, 233, 231, 0.2), transparent);
-      z-index: 1;
-  }
+    width:70vw;
+    background-image: url(../images/Prancheta\ 34.png);
+    background-repeat: repeat;
+    background-size: 70vw auto;
+}
 
   .form-container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-  }
+    position: relative;
+    background: var(--dark-green);
+    padding: 2rem;
+    overflow: hidden;
+    border: 5px solid var(--gold);
+    box-shadow: 
+    0 0 0 5px var(--primary-pink),                     /* middle border */
+    0 0 0 10px var(--gold);  
+    border-radius:10px;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gentleGradient 6s ease-in-out infinite;
+}
+
+.form-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: var(--cream); */
+    border-radius: 20px;
+    z-index: -1;
+}
 
   .input-group {
       display: flex;
@@ -1024,7 +1049,48 @@ body {
           background-repeat: no-repeat;
           background-size: 40vw auto;
       }
-
+      .hero2#apply-for-membership {
+        background:unset;
+        position: relative;
+      }
+      .hero2#apply-for-membership::before {
+        content: "";
+        position: absolute;
+        /* top:150vh; */
+        left: 0;
+        right: 0;
+        bottom: 0;                  
+        height: 5vh;               
+        background-image: url(../images/Prancheta\ 32.png);
+        background-repeat: repeat; 
+        background-position: center top;
+        background-size: 20vh auto; 
+        pointer-events: none;
+        z-index: 0;                 
+      }
+      body#membership-body {
+        background-image: url(../images/vintage-maps.png);
+        background-position: center;
+        position: relative;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        background-size: cover; 
+      }
+      body#membership-body::before {
+        content: "";
+        position: absolute;
+        /* top:150vh; */
+        left: 0;
+        right: 0;
+        bottom: 0;                  
+        height: 65vh;               
+        background-image: url(../images/pattern.png);
+        background-repeat: repeat; 
+        background-position: center top;
+        background-size: 80vw auto; 
+        pointer-events: none;
+        z-index: 0;                 
+      }
       .hero-content2 h1 {
           font-family: var(--heading-font);
           font-size: 4rem;
@@ -1050,7 +1116,14 @@ body {
           background-repeat: repeat;
           background-size: 80vw auto;
       }
-
+      .main-content-membership{
+        padding: 2rem 4rem 6rem 4rem;
+        margin: 0 auto;
+        justify-items: center;
+      }
+      .application-process-section{
+        width:100%;
+      }
       .guides-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -2049,7 +2122,75 @@ button.remove-item:hover {
       margin-bottom: 2.1rem;
       position: relative;
   }
-  
+  /* Application Process Preview */
+  .process-preview {
+    background: var(--primary-pink);
+    padding: 2rem;
+    margin: 3rem 0;
+    border:2px solid var(--gold-dark);
+    width: 100%;
+    border-radius: 10px;
+    /* outline: 8px solid var(--cream); */
+    /* backdrop-filter: blur(5px); */
+    box-shadow: 
+    0 0 0 5px var(--primary-pink),                     /* middle border */
+    0 0 0 10px var(--cream);  
+}
+
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.process-step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    z-index: 1;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gold-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    font-size: var(--heading-font);
+    box-shadow: 0 4px 15px rgba(194, 167, 126, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.step-title {
+    font-family: var(--heading-font);
+    font-size: var(--body-font);
+    color: var(--dark-green);
+    margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  font-size: var(--body-font);
+    color: var(--gold-dark);
+    opacity: 0.8;
+}
   /* Responsive Design */
   @media (max-width: 1200px) {
     .hero {
@@ -2385,11 +2526,13 @@ button.remove-item:hover {
         font-size: 2.5rem;
     }
   
-    .main-content {
+    .main-content, .main-content-membership {
         padding: 4rem 2rem;
         background-size: 150vw auto;
     }
-  
+  .waitlist{
+    padding: 0rem;
+  }
     .payment-info {
         padding: 2rem;
     }
@@ -2493,6 +2636,26 @@ button.remove-item:hover {
       background-size: 30vw; 
       background-position-x: 50%;
     }
+    .process-steps {
+      flex-direction: column;
+      gap: 2rem;
+  }
+  
+  .process-step:not(:last-child)::after {
+      top: auto;
+      bottom: -1rem;
+      right: auto;
+      left: 50%;
+      width: 2px;
+      height: 2rem;
+      background: linear-gradient(180deg, var(--gold), transparent);
+      transform: translateX(-50%);
+      display: none;
+  }
+  .form-container {
+    margin: 2rem auto;
+    padding: 2rem;
+}
   }
   @media (max-width: 550px) {
     .guide-card {

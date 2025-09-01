@@ -23,10 +23,6 @@
     <meta name="twitter:site" content="@yourtwitterhandle">
     <script src="script/script.js"></script>
     <script async src="https://tally.so/widgets/embed.js"></script>
-    <!-- Preloaded Tally Script -->
-    <script>
-        var dd=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():dd.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(dd.querySelector('script[src="'+w+'"]')==null){var s=dd.createElement("script");s.src=w,s.onload=v,s.onerror=v,dd.body.appendChild(s);}
-    </script>
     <title>Bario - Exclusive Travel Experiences</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="static/css/styles.css" rel="stylesheet">
@@ -47,6 +43,7 @@
                   <div class="nav-links" id="navLinks">
                       <a href="/" class="active">Home</a>
                       <a href="/travel-guides">Travel Guides</a>
+                      <a href="/apply-for-membership">Apply for Membership</a>
                   </div>
                   
                   <div class="basket-icon" onclick="toggleBasket()">
@@ -67,7 +64,7 @@
                     <h1>Travel. Curated by Insiders. Shared by Members.</h1>
                     <p class="luxury-text">Bario is an invite-only social platform for trusted, high-quality travel recommendations—connecting like-minded travelers through authentic experiences, exclusive perks, and a private global community.</p>
                     <p class="luxury-text" style="margin-top: 1rem;">We believe in meaningful travel—not just visiting a place but experiencing it the way locals do. Whether you're searching for hidden gems, unique activities, top-rated dining, or exclusive retreats, Bario ensures you have access to the most desirable travel recommendations at your fingertips.</p>
-                    <button style="margin-top: 3rem;" id="membership">Pre-launch List</button>
+                    <button style="margin-top: 3rem;" id="membership">Join Bario</button>
                     <!-- <button style="margin-top: 3rem;" id="partnership">Apply for Membership</button> -->
                 </div>
                 <div class="hero-image fade-in"></div>
@@ -230,38 +227,7 @@
                   </div>
                 </div>
               </div>
-           <section class="waitlist">
-        <div class="form-container">
-            <h2 class="fade-in"style="font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 2rem; font-weight: 400;">Join Bario</h2>
-            <!-- <p class="luxury-text" style="color: #DDD;">Member: Join a global community of discerning travelers. Gain access to exclusive recommendations, private events, and curated experiences—all shared by like-minded explorers who believe in meaningful travel.
-            <br><br>
-              Partner: Partner with Bario to connect with a private network of discerning travelers who seek authentic, high-quality experiences. Showcase your brand, offer exclusive perks and gain visibility while engaging with a community of tastemakers, explorers, and experience-seekers.</p> -->
-           <!-- <div class="application-tabs">
-                <button class="tab-btn active" onclick="showTab('member-tab')">Membership</button>
-                <button class="tab-btn" onclick="showTab('partner-tab')">Partnership</button>
-            </div>
-           <div id="member-tab" class="tab-content active">
-                <iframe data-tally-src="https://tally.so/embed/n9MvdX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2649" frameborder="0" marginheight="0" marginwidth="0" title="null"></iframe>
 
-            </div>
-            <div id="partner-tab" class="tab-content">
-               <iframe data-tally-src="https://tally.so/embed/wgvNyK?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2649" frameborder="0" marginheight="0" marginwidth="0" title="null"></iframe>
-            </div> -->
-            <iframe data-tally-src="https://tally.so/embed/n9MvdX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2686" frameborder="0" marginheight="0" marginwidth="0" title="Membership Form"></iframe>
-            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-            <div class="social-badge-container">
-              <div class="social-badge-placeholder"></div>
-              <div href="#" class="brand-badge">
-                  <img src="./static/images/Prancheta 16.png" alt="Bario Club Logo" class="brand-badge-image">
-              </div>
-              <div class="social-badge">
-                  <a href="https://www.instagram.com/bario.club/" target="_blank" rel="noopener noreferrer">
-                      <i class="fab fa-instagram"></i>
-                  </a>
-              </div>
-          </div>
-        </div>
-    </section>
   </div>
       <!-- Basket Overlay -->
       <div class="basket-overlay" onclick="toggleBasket()"></div>
@@ -316,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeScrollRevealAnimations();
   initializeParallaxScroll();
   initializeSectionTransitions();
-  initializeTallyPopup();
   initializeSmoothScrollButtons();
 });
 
@@ -679,73 +644,24 @@ function initializeSectionTransitions() {
 }
 </script>
 <script>
-// TALLY POPUP INITIALIZATION
-
-function initializeTallyPopup() {
-  // Function to show the Tally popup
-  function openTallyPopup() {
-      if (typeof Tally !== 'undefined') {
-          Tally.openPopup('n9MvdX', {
-              width: 660,
-              emoji: {
-                  text: '👋',
-                  animation: 'wave'
-              },
-              autoClose: false,
-              hideTitle: false,
-              overlay: true,
-              layout: 'modal'
+    function initializeSmoothScrollButtons() {
+        // Membership button → membership page
+        const membershipBtn = document.getElementById("membership");
+        if (membershipBtn) {
+          membershipBtn.addEventListener("click", () => {
+            window.location.href = "/apply-for-membership";
           });
-          
-          setTimeout(() => {
-              const tallyOverlay = document.querySelector('.tally-overlay');
-              if (tallyOverlay) {
-                  tallyOverlay.classList.add('tally-popup-overlay');
-              }
-              
-              const tallyPopup = document.querySelector('.tally-popup');
-              if (tallyPopup) {
-                  tallyPopup.classList.add('tally-popup-container');
-              }
-          }, 100);
-      } else {
-          // If Tally isn't loaded yet, try again in 500ms
-          setTimeout(openTallyPopup, 500);
+        }
+      
+        // Partnership button → partnership page (update path if needed)
+        const partnershipBtn = document.getElementById("partnership");
+        if (partnershipBtn) {
+          partnershipBtn.addEventListener("click", () => {
+            window.location.href = "/apply-for-partnership";
+          });
+        }
       }
-  }
-
-  // Function to check if popup was already shown (using cookies)
-  function hasPopupBeenShown() {
-      return document.cookie.split(';').some((item) => item.trim().startsWith('barioPopupShown='));
-  }
-
-  // Show popup after a delay (only if not shown before)
-  if (!hasPopupBeenShown()) {
-      // Wait 2 seconds before showing the popup
-      setTimeout(function() {
-          openTallyPopup();
-          // Set cookie to remember that popup was shown (expires after 1 day)
-          document.cookie = "barioPopupShown=true; max-age=86400; path=/";
-      }, 2000);
-  }
-}
-</script>
-<script>
-// SMOOTH SCROLL FOR BUTTONS
-
-function initializeSmoothScrollButtons() {
-  // Smooth scroll for buttons that target the waitlist section
-  document.querySelectorAll('button').forEach(button => {
-      button.addEventListener('click', () => {
-          const waitlistSection = document.querySelector('.waitlist');
-          if (waitlistSection) {
-              waitlistSection.scrollIntoView({
-                  behavior: 'smooth'
-              });
-          }
-      });
-  });
-}
+      
 </script>
 <script>
 // TAB FUNCTIONALITY (for forms/content switching)
