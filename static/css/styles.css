@@ -472,6 +472,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       margin-top: 2rem;
+      background: var(--primary-pink);
+      padding: 2rem;
+      border-radius: 10px;
+      border:2px solid var(--gold-dark);
+      box-shadow: 
+      0 0 0 5px var(--primary-pink),                     /* middle border */
+      0 0 0 10px var(--gold-dark);  
   }
 
   .retreat-item {
@@ -481,6 +488,9 @@
 
   .retreat-content p.luxury-text {
     color:var(--primary-pink);
+  }
+  .retreat-list .retreat-item p.luxury-text {
+    color: var(--gold-dark);
   }
   /* Animations and Reveal Effects */
   .fade-in {
