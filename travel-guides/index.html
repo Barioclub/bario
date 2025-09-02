@@ -86,6 +86,24 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="guides-grid">
+                                <!-- Puglia Guide -->
+                                <div class="guide-card fade-in">
+                                    <div class="guide-image puglia" onclick="openGuidePreview('puglia', 'The Puglia Guide', 12.99)">
+                                        <div class="price-tag">12.99€</div>
+                                    </div>
+                                    <div class="guide-content">
+                                        <h3 class="guide-title">The Puglia Guide</h3>
+                                        <p class="guide-description">Southern Italy's Puglia region stretches across the country's heel like a secret waiting to be shared - raw, radiant, and rooted in tradition.</p>
+                                        <!-- REPLACE WITH YOUR ACTUAL STRIPE PAYMENT LINK -->
+                                        <button href="https://buy.stripe.com/test_REPLACE_WITH_YOUR_PUGLIA_LINK" class="buy-now-btn" target="_blank">
+                                            <i class="fas fa-credit-card"></i> Buy Now - 12.99€
+                                        </button>
+                                        <button class="add-to-basket-btn" onclick="addToBasket('puglia', 'The Puglia Guide', 28.99)">
+                                            <i class="fas fa-plus"></i>
+                                            Add to Basket
+                                        </button>
+                                    </div>
+                                </div> 
                     <!-- Cyclades Guide -->
                     <div class="guide-card fade-in">
                         <div class="guide-image cyclades" onclick="openGuidePreview('cyclades', 'The Cyclades Guide', 12.99)">
