@@ -326,7 +326,7 @@
   .who-we-are {
       grid-column: 1 / -1;
       padding: 8rem 4rem;
-      background: var(--dark-green);
+      background: var(--gold-dark);
       position: relative;
       /* margin: 4rem 0; */
       background-image: url(../images/Prancheta\ 85.png);
@@ -414,7 +414,7 @@
 
   .form-container {
     position: relative;
-    background: var(--dark-green);
+    background: var(--gold-dark);
     padding: 2rem;
     overflow: hidden;
     border: 5px solid var(--gold);
@@ -534,6 +534,8 @@
     max-height: 140px;
     padding:1rem;
     padding-top:2rem;
+    width:200px;
+    height:auto;
 }
 
   /* Application Form Styles */
@@ -582,7 +584,7 @@ width: 100%;
 .pattern {
     position: relative;
     background: var(--primary-pink); /* Change background to pink */
-    background-image: url('../images/pattern7.png'); /* Add the diamond pattern */
+    background-image: url('../images/pattern4.png'); /* Add the diamond pattern */
     background-repeat: repeat; /* Make the pattern repeat */
     background-size: 100vw auto; /* Adjust the size as needed */
     width:100%;
@@ -2543,6 +2545,7 @@ button.remove-item:hover {
     }
   .waitlist{
     padding: 0rem;
+    width:100%;
   }
     .payment-info {
         padding: 2rem;
