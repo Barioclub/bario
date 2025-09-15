@@ -70,7 +70,7 @@
       /* background-color: var(--dark); */
       overflow-x: hidden;
       background-color: var(--cream);
-  transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
   }
   #section-transition-overlay {
     transition: opacity 0.3s ease;
@@ -410,42 +410,6 @@
     background-image: url(../images/Prancheta\ 34.png);
     background-repeat: repeat;
     background-size: 70vw auto;
-}
-
-  .form-container {
-    position: relative;
-    background: var(--gold-dark);
-    padding: 2rem;
-    overflow: hidden;
-    border: 5px solid var(--gold);
-    box-shadow: 
-    0 0 0 5px var(--primary-pink),                     /* middle border */
-    0 0 0 10px var(--gold);  
-    border-radius:10px;
-}
-
-.form-container::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background-size: 400% 400%;
-    z-index: -1;
-    animation: gentleGradient 6s ease-in-out infinite;
-}
-
-.form-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background: var(--cream); */
-    border-radius: 20px;
-    z-index: -1;
 }
 
   .input-group {
@@ -2204,6 +2168,42 @@ button.remove-item:hover {
     color: var(--gold-dark);
     opacity: 0.8;
 }
+    /* iOS Cursor Position Fix */
+    .form-container-fixed {
+      position: relative;
+      background: var(--gold-dark);
+      padding: 2rem;
+      border: 5px solid var(--gold);
+      box-shadow: 
+          0 0 0 5px var(--primary-pink),
+          0 0 0 10px var(--gold);
+      border-radius: 10px;
+      /* CRITICAL: Remove all transforms and pseudo-elements that break iOS input positioning */
+      transform: none !important;
+  }
+  
+  /* Remove the interfering pseudo-element completely */
+  .form-container-fixed::before,
+  .form-container-fixed::after {
+      display: none !important;
+  }
+  
+  .ios-iframe-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: visible;
+      /* CRITICAL: No transforms that break iOS input positioning */
+      transform: none !important;
+  }
+  
+  .ios-input-focused body {
+      position: relative !important;
+  }
+  
+  .ios-input-focused header {
+      position: absolute !important;
+      top: 0 !important;
+  }
   /* Responsive Design */
   @media (max-width: 1200px) {
     .hero {
@@ -2249,7 +2249,47 @@ button.remove-item:hover {
   }
   
   @media (max-width: 768px) {
-  
+      /* iOS-specific fixes */
+        body {
+            position: static !important;
+            transform: none !important;
+            -webkit-transform: none !important;
+            /* Allow normal touch behavior */
+            touch-action: auto !important;
+            -webkit-touch-callout: default !important;
+            -webkit-user-select: text !important;
+            user-select: text !important;
+            overflow-x: visible !important;
+        }
+        
+        .ios-iframe-wrapper iframe {
+            width: 100% !important;
+            height: 1150px !important;
+            min-height: 100vh !important;
+            border: none !important;
+            /* Remove any CSS that causes cursor offset */
+            transform: none !important;
+            -webkit-transform: none !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        .form-container-fixed,
+        .waitlist,
+        .main-content-membership {
+            transform: none !important;
+            -webkit-transform: none !important;
+            position: relative !important;
+        }
+        
+        .mobile-menu-overlay,
+        .basket-overlay {
+            pointer-events: none !important;
+        }
+        
+        .mobile-menu-overlay.active,
+        .basket-overlay.open {
+            pointer-events: auto !important;
+        }
     .hero h1 {
         min-height: 4.75rem;
     }
@@ -2670,6 +2710,7 @@ button.remove-item:hover {
     margin: 2rem auto;
     padding: 2rem;
 }
+
   }
   @media (max-width: 550px) {
     .guide-card {
