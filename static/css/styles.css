@@ -90,7 +90,23 @@
       /* gap: 2rem; */
   }
 
+  .social-links{
+  
+    font-size:80%;
+    padding:0.5rem;
+    text-align: center;
+    background: var(--primary-pink); 
+    justify-content: center;
+    display: flex;
+    border-top:0.1px solid var(--gold);
+    width:100vw;
+  }
 
+  .social-links div.social-badge a {
+    padding-left: 1rem;
+    padding-right:1rem;
+    color:var(--gold-dark);
+  }
   .footnote{
     color:var(--gold-dark);
     /* opacity:0.6; */
