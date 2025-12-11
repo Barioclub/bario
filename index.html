@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
     <body>
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
         <div class="grid-container">
             <header id="header">
                 <a href="/" class="logo">
@@ -40,31 +41,42 @@
                   <button>Pre-launch List</button>
                 </div> -->
                 <div class="nav-right">
-                  <div class="nav-links" id="navLinks">
+                    <div class="nav-links" id="navLinks">
                       <a href="/" class="active">Home</a>
                       <a href="/travel-guides">Travel Guides</a>
-                      <a href="/apply-for-membership">Apply for Membership</a>
-                  </div>
-                  
-                  <div class="basket-icon" onclick="toggleBasket()">
+                      <div class="nav-dropdown" id="applyDropdown">
+                        <a href="#" onclick="toggleDropdown(event)">
+                          Apply
+                          <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                          <a href="/members">Members</a>
+                          <a href="/apply-for-partnership">Partners</a>
+                        </div>
+                      </div>
+                      <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
+                    </div>
+                    
+                    <div class="basket-icon" onclick="toggleBasket()">
                       <i class="fas fa-shopping-basket"></i>
                       <span class="basket-count" id="basketCount">0</span>
+                    </div>
+            
+                    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
                   </div>
-          
-                  <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                  </div>
-              </div>
             </header>
     
             <section class="hero">
                 <div class="hero-content fade-in">
-                    <h1>Travel. Discovered by Insiders. Shared by Members.</h1>
-                    <p class="luxury-text">Bario is an invite-only social platform for trusted, high-quality travel recommendations—connecting like-minded travelers through authentic experiences, exclusive perks, and a private global community.</p>
-                    <p class="luxury-text" style="margin-top: 1rem;">We believe in meaningful travel—not just visiting a place but experiencing it the way locals do. Whether you're searching for hidden gems, unique activities, top-rated dining, or exclusive retreats, Bario ensures you have access to the most desirable travel recommendations at your fingertips.</p>
-                    <button style="margin-top: 3rem;" id="membership">Join Bario</button>
+                    <h1>The members-only travel platform.</h1>
+                    <p class="luxury-text">Bario is a private travel community that redefines exploration. It connects real travelers and local insiders to share authentic, beloved places, while using intelligent AI trip planning to make every journey effortless and personalized.</p>
+                    <p class="luxury-text">Built on trust and quality, Bario helps members plan unique trips, manage their travel lists, discover recommendations from a trusted global circle, and access exclusive partner benefits and community gatherings</p>
+                    <p class="luxury-text fade-in" style="margin-top: 3rem; font-size: 1.2rem; font-family: var(--heading-font); font-weight:500; color: var(--dark-green);">Because meaningful travel isn’t about how far you go, it’s about how deeply you experience it.</p>
+                    <!-- <button style="margin-top: 3rem;" id="membership">Access Platform</button> -->
                     <!-- <button style="margin-top: 3rem;" id="partnership">Apply for Membership</button> -->
                 </div>
                 <div class="hero-image fade-in"></div>
@@ -75,9 +87,9 @@
                 
                 <div class="who-we-are-content">
                     <h2 class="section-title-lighter fade-in">The Story Behind Bario</h2>
-                    <p class="luxury-text-lighter fade-in">It all started with a simple habit—whenever our founders, traveled, they would reach out to friends for the best local recommendations. They weren't looking for the usual tourist spots but instead sought out the hidden gems—a charming neighborhood café, a bustling fruit market, an offbeat gallery, or a rooftop bar with the perfect view.</p>
-                    <p class="luxury-text-lighter fade-in" style="margin-top: 2rem;">Having traveled across the world, they always felt that the best experiences came from living like a local—immersing themselves in the true essence of a place rather than following a guidebook.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--primary-pink); font-family: var(--heading-font); font-size: 1.4rem; font-weight:500;">Welcome to Bario—a members-only travel platform built by travelers, for travelers.</p>
+                    <p class="luxury-text-lighter fade-in">It all started with a simple habit, whenever our founders traveled, they would reach out to friends for the best local recommendations. They weren't looking for the usual tourist spots but instead sought out the hidden gems. A charming neighborhood café, a bustling fruit market, an offbeat gallery, or a rooftop bar with the perfect view.</p>
+                    <p class="luxury-text-lighter fade-in" style="margin-top: 2rem;">Having traveled across the world, they always felt that the best experiences came from living like a local, immersing themselves in the true essence of a place rather than following a guidebook.</p>
+                    <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--primary-pink); font-family: var(--heading-font); font-size: 1.4rem; font-weight:500;">Welcome to Bario, a members-only travel platform built by travelers, for travelers.</p>
                 </div>
                 
             </section>
@@ -88,146 +100,10 @@
                     <h2 class="section-title">Our Journey</h2>
                     <p class="luxury-text fade-in">The travels of our founders around the world laid the foundation for everything we do. As their travels took them from Europe to South America, Asia to the Middle East, they realized the same need kept coming up: a trusted way to discover local favorites through real people, not algorithms.</p>
                     <p class="luxury-text fade-in" style="margin-top: 2rem;">Fast forward to last year, they decided to turn this idea into something real: a private community of like-minded travelers, designed to connect, share knowledge, and elevate each other's experiences.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem;">And so, Bario was born—a members-only travel platform built by travelers, for travelers.</p>
+                    <p class="luxury-text fade-in" style="margin-top: 2rem;">And so, Bario was born, a members-only travel platform built by travelers, for travelers.</p>
                   </div>
             </section>
            
-             <div class="bario-parallax-wrapper">
-                <div class="bario-scroll-container">
-                  <div class="bario-sticky-container">
-                    <div class="bario-horizontal-scroll-section">
-                      <div class="bario-slide" id="bario-slide1">
-                        <div class="bario-background-layer"></div>
-                        <div class="bario-image-layer bario-image-1"></div>
-                        <div class="bario-text-content">
-                        <h6 class="why-join-title">Why Join Bario?</h6>
-                          <h3 class="section-title-lighter2">Personalised Travel Recommendations</h3>
-                          <p class="luxury-text"><i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Find the best local experiences and activities - from secret city spots to must-visit destinations.<br><br>
-                            <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Members-Only Travel Lists - trusted recommendations from our global community.<br><br>
-                            <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Digital Travel Guides - your passport to personalised, insider knowledge.<br><br>
-                            <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Best Deals on Accommodation, Restaurants & Cafés - exclusive savings for Bario members.<br><br>
-                            <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Flight Deals & Insider Perks - early access to the best rates on flights.
-                        </p>
-                        </div>
-                      </div>
-                      
-                      <div class="bario-slide" id="bario-slide2">
-                        <div class="bario-background-layer"></div>
-                        <div class="bario-image-layer bario-image-2"></div>
-                        <div class="bario-text-content">
-                            <h6 class="why-join-title">Why Join Bario?</h6>
-                            <h3 class="section-title-lighter2">A Private, Passionate Community</h3>
-                            <p class="luxury-text"><i class="fa-solid fa-arrow-right"style="color:var(--gold)"></i>&nbsp;&nbsp;Members-Only Platform—an exclusive space for passionate travelers to connect.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Share Your Recommendations—add your favorite finds and exchange tips with fellow explorers.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Get Insider Knowledge—access local insights and expert-approved lists.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Bario Editorial & Weekly Newsletter—handpicked travel stories, hidden gems, and exclusive insights.
-                            </p>
-                        </div>
-                      </div>
-                      
-                      <div class="bario-slide" id="bario-slide3">
-                        <div class="bario-background-layer"></div>
-                        <div class="bario-image-layer bario-image-3"></div>
-                        <div class="bario-text-content">
-                            <h6 class="why-join-title">Why Join Bario?</h6>
-                            <h3 class="section-title-lighter2">Benefits & Loyalty Perks</h3>
-                            <p class="luxury-text"><i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Exclusive Member Discounts—special offers on top brands, travel services, and lifestyle experiences.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Limited Offers Just for Bario Members—partner deals you won't find elsewhere.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Priority Access to New Venue Openings & Events—be the first to experience the latest hotspots.<br><br>
-                            </p>
-                        </div>
-                      </div>
-                      
-                      <div class="bario-slide" id="bario-slide4">
-                        <div class="bario-background-layer"></div>
-                        <div class="bario-image-layer bario-image-4"></div>
-                        <div class="bario-text-content">
-                            <h6 class="why-join-title">Why Join Bario?</h6>
-                            <h3 class="section-title-lighter2">Build Meaningful Connections</h3>
-                            <p class="luxury-text"><i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Local Knowledge at Your Fingertips—insider guides for food, nightlife, and culture.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Personalized Travel Guides—crafted recommendations tailored to your style.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Exclusive Brand Partnerships—discounts on hotels, restaurants, bars, wellness studios, and retreats.<br><br>
-                                <i class="fa-solid fa-arrow-right" style="color:var(--gold)"></i>&nbsp;&nbsp;Healthy Lifestyle & Wellness Experiences—from yoga classes to weekend getaways.<br><br>
-                            </p>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-            <section class="retreat">
-                <div class="retreat-content">
-                    <h2 class="section-title-lighter2 fade-in">Exclusive Member Retreats</h2>
-                    <p class="luxury-text fade-in">Bario members will receive invitations to our exclusive Bario retreats, held twice a year, designed to help you recharge, reconnect, and immerse yourself in extraordinary destinations. The best wellness retreats are all about finding balance—whether you're looking to rest and recalibrate or energize and seek enlightenment.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 1.5rem;">Each retreat offers a carefully personalised program, including:</p>
-                    <div class="retreat-list">
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-utensils" style="color:var(--gold)"></i>&nbsp;&nbsp;Full-board dining with nourishing meals</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-spa" style="color:var(--gold)"></i>&nbsp;&nbsp;Breathwork & Sound Meditation</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-fire-flame-curved" style="color:var(--gold)"></i>&nbsp;&nbsp;HIIT Classes to boost energy</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-mug-saucer" style="color:var(--gold)"></i>&nbsp;&nbsp;Coffee & Confidence Sessions</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-spa" style="color:var(--gold)"></i>&nbsp;&nbsp;Yoga to unwind and rejuvenate</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-spa" style="color:var(--gold)"></i>&nbsp;&nbsp;Sound Meditation for relaxation</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-palette" style="color:var(--gold)"></i>&nbsp;&nbsp;Art Tours exploring local galleries</p>
-                        </div>
-                        <div class="retreat-item">
-                            <p class="luxury-text fade-in"><i class="fa-solid fa-landmark" style="color:var(--gold)"></i>&nbsp;&nbsp;History Tours led by expert guides</p>
-                        </div>
-                    </div>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem; font-style: italic;">The first retreat will take place in September 2025 in Greece, offering an unforgettable experience in a breathtaking setting.</p>
-                </div>
-            </section>
-           
-            <div class="bario-parallax-wrapper2">
-                <div class="bario-scroll-container2">
-                  <div class="bario-sticky-container2">
-                    <div class="bario-horizontal-scroll-section2">
-                      <div class="bario-slide2" id="bario-slidea">
-                        <div class="bario-text-content2">
-                            <h3 class="section-title">Personalised Experiences</h3>
-                            <p class="luxury-text">Discover hidden gems, authentic local spots, and extraordinary activities selected by our community of discerning travelers.</p>
-                        </div>
-                        <div class="bario-background-layer2"></div>
-                        <div class="bario-image-layer2 bario-image-a"></div>
-                      </div>
-                      
-                      <div class="bario-slide2" id="bario-slideb">
-                        <div class="bario-text-content2">
-                            <h3 class="section-title">Global Community</h3>
-                    <p class="luxury-text">Connect with like-minded travelers who share your passion for authentic, transformative travel experiences.</p>
-                        </div>
-                        <div class="bario-background-layer2"></div>
-                        <div class="bario-image-layer2 bario-image-b"></div>
-                      </div>
-                      
-                      <div class="bario-slide2" id="bario-slidec">
-                    
-                        <div class="bario-text-content2">
-                            <h3 class="section-title">Exclusive Access</h3>
-                            <p class="luxury-text">Gain privileged access to special perks, discounts, and members-only events in destinations around the world.</p>
-                        </div>
-                        <div class="bario-background-layer2"></div>
-                        <div class="bario-image-layer2 bario-image-c"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
   </div>
       <!-- Basket Overlay -->
       <div class="basket-overlay" onclick="toggleBasket()"></div>
@@ -281,84 +157,99 @@
     document.getElementById("demo").innerHTML = year;
 </script>
 <script>
-
-  
-// MAIN INITIALIZATION
-
-document.addEventListener('DOMContentLoaded', () => {
-  initializeHeaderScroll();
-  initializeMobileMenu();
-  initializeHeroAnimations();
-  initializeScrollRevealAnimations();
-  initializeParallaxScroll();
-  initializeSectionTransitions();
-  initializeSmoothScrollButtons();
-});
-
-
-// HEADER & NAVIGATION
-
-function initializeHeaderScroll() {
-  const header = document.getElementById('header');
-  let lastScroll = 0;
-
-  window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 50) {
+    // MAIN INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeHeaderScroll();
+      initializeMobileMenu();
+      initializeHeroAnimations();
+      initializeScrollRevealAnimations();
+      initializeParallaxScroll();
+      initializeSectionTransitions();
+      initializeSmoothScrollButtons();
+    });
+    
+    // HEADER & NAVIGATION
+    function initializeHeaderScroll() {
+      const header = document.getElementById('header');
+      if (!header) return;
+      
+      let lastScroll = 0;
+    
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+    
+        if (currentScroll > 50) {
           header.classList.add('scrolled');
-      } else {
+        } else {
           header.classList.remove('scrolled');
-      }
-
-      lastScroll = currentScroll;
-  });
-}
-
-function initializeMobileMenu() {
-  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-  const navLinks = document.getElementById('navLinks');
-  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-
-  function toggleMobileMenu() {
-      mobileMenuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      mobileMenuOverlay.classList.toggle('active');
-      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-  }
-
-  function closeMobileMenu() {
-      mobileMenuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      mobileMenuOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-  }
-
-  if (mobileMenuToggle) {
-      mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-  }
-  
-  if (mobileMenuOverlay) {
-      mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-  }
-
-  // Close mobile menu when clicking on nav links
-  if (navLinks) {
-      navLinks.addEventListener('click', (e) => {
-          if (e.target.tagName === 'A') {
-              closeMobileMenu();
-          }
+        }
+    
+        lastScroll = currentScroll;
       });
-  }
-
-  // Close mobile menu on window resize if it's open
-  window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
-          closeMobileMenu();
+    }
+    
+    function initializeMobileMenu() {
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      const dropdownTrigger = document.querySelector('.nav-dropdown > a');
+    
+      function toggleMobileMenu() {
+        if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+        
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
       }
-  });
-}
-</script>
+    
+      function closeMobileMenu() {
+        if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+        
+        mobileMenuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    
+      // Dropdown toggle
+      if (dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (window.innerWidth <= 768) {
+            const dropdown = document.getElementById('applyDropdown');
+            if (dropdown) {
+              dropdown.classList.toggle('active');
+            }
+          }
+        });
+      }
+    
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+      }
+      
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+      }
+    
+      // Close mobile menu when clicking on nav links
+      if (navLinks) {
+        navLinks.addEventListener('click', (e) => {
+          if (e.target.tagName === 'A' && !e.target.parentElement.classList.contains('nav-dropdown')) {
+            closeMobileMenu();
+          }
+        });
+      }
+    
+      // Close mobile menu on window resize if it's open
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+          closeMobileMenu();
+        }
+      });
+    }
+</script>    
 <script>
 
 // HERO SECTION ANIMATIONS
@@ -659,7 +550,7 @@ function initializeSectionTransitions() {
         const membershipBtn = document.getElementById("membership");
         if (membershipBtn) {
           membershipBtn.addEventListener("click", () => {
-            window.location.href = "/apply-for-membership";
+            window.location.href = "https://bario-mvp-web-app.vercel.app/login";
           });
         }
       

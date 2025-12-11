@@ -27,6 +27,7 @@
   <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
 </head>
 <body class="payment-body">
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <!-- Header -->
     <header id="header">
       <a href="/" class="logo">
@@ -34,22 +35,32 @@
       </a>
       <div class="nav-right">
         <div class="nav-links" id="navLinks">
-            <a href="/">Home</a>
-            <a href="/travel-guides">Travel Guides</a>
-            <a href="/apply-for-membership">Apply for Membership</a>
+          <a href="/">Home</a>
+          <a href="/travel-guides">Travel Guides</a>
+          <div class="nav-dropdown" id="applyDropdown">
+            <a href="#" onclick="toggleDropdown(event)">
+              Apply
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/members">Members</a>
+              <a href="/apply-for-partnership">Partners</a>
+            </div>
+          </div>
+          <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
         </div>
         
         <div class="basket-icon" onclick="toggleBasket()">
-            <i class="fas fa-shopping-basket"></i>
-            <span class="basket-count" id="basketCount">0</span>
+          <i class="fas fa-shopping-basket"></i>
+          <span class="basket-count" id="basketCount">0</span>
         </div>
 
         <div class="mobile-menu-toggle" id="mobileMenuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -330,61 +341,99 @@
         }
     </script>
     <script>
+        // MAIN INITIALIZATION
         document.addEventListener('DOMContentLoaded', () => {
-            // Enhanced scroll handling for header
-            const header = document.getElementById('header');
-            let lastScroll = 0;
-
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-
-                if (currentScroll > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-
-                lastScroll = currentScroll;
-            });
-
-            // Mobile menu functionality
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const navLinks = document.getElementById('navLinks');
-            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-
-            function toggleMobileMenu() {
-                mobileMenuToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                mobileMenuOverlay.classList.toggle('active');
-                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-            }
-
-            function closeMobileMenu() {
-                mobileMenuToggle.classList.remove('active');
-                navLinks.classList.remove('active');
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-
-            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-
-            // Close mobile menu when clicking on nav links
-            navLinks.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') {
-                    closeMobileMenu();
-                }
-            });
-
-            // Close mobile menu on window resize if it's open
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-                    closeMobileMenu();
-                }
-            });
+          initializeHeaderScroll();
+          initializeMobileMenu();
+          initializeHeroAnimations();
+          initializeScrollRevealAnimations();
+          initializeParallaxScroll();
+          initializeSectionTransitions();
+          initializeSmoothScrollButtons();
         });
-
-    </script>
+        
+        // HEADER & NAVIGATION
+        function initializeHeaderScroll() {
+          const header = document.getElementById('header');
+          if (!header) return;
+          
+          let lastScroll = 0;
+        
+          window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+        
+            if (currentScroll > 50) {
+              header.classList.add('scrolled');
+            } else {
+              header.classList.remove('scrolled');
+            }
+        
+            lastScroll = currentScroll;
+          });
+        }
+        
+        function initializeMobileMenu() {
+          const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+          const navLinks = document.getElementById('navLinks');
+          const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+          const dropdownTrigger = document.querySelector('.nav-dropdown > a');
+        
+          function toggleMobileMenu() {
+            if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+            
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+          }
+        
+          function closeMobileMenu() {
+            if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+            
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        
+          // Dropdown toggle
+          if (dropdownTrigger) {
+            dropdownTrigger.addEventListener('click', (e) => {
+              e.preventDefault();
+              if (window.innerWidth <= 768) {
+                const dropdown = document.getElementById('applyDropdown');
+                if (dropdown) {
+                  dropdown.classList.toggle('active');
+                }
+              }
+            });
+          }
+        
+          if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+          }
+          
+          if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+          }
+        
+          // Close mobile menu when clicking on nav links
+          if (navLinks) {
+            navLinks.addEventListener('click', (e) => {
+              if (e.target.tagName === 'A' && !e.target.parentElement.classList.contains('nav-dropdown')) {
+                closeMobileMenu();
+              }
+            });
+          }
+        
+          // Close mobile menu on window resize if it's open
+          window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+              closeMobileMenu();
+            }
+          });
+        }
+    </script>   
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Intersection Observer for fade-in animations

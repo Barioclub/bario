@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Standard Meta Tags -->
+      <meta name="title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta name="description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+  
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta property="og:description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
+      <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+      <meta property="og:url" content="https://barioclub.com">
+      <meta property="og:site_name" content="Bario">
+  
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Bario | Curated Travel by Insiders, Shared by Members">
+      <meta name="twitter:description" content="Discover hidden travel gems and exclusive recommendations on Bario, a private travel community for meaningful, local-style exploration.">
+      <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+      <meta name="twitter:site" content="@yourtwitterhandle">
+  <script src="../script/script.js"></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+      <!-- <meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self'; 
+             script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; 
+             style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; 
+             font-src https://fonts.gstatic.com;
+             img-src 'self' data: https://images.unsplash.com https://via.placeholder.com;"> -->
+  <title>Apply for Partnership - Bario</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Header -->
+    <header id="header">
+      <a href="/" class="logo">
+        <img src="../static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/travel-guides">Travel Guides</a>
+          <div class="nav-dropdown" id="applyDropdown">
+            <a href="#" onclick="toggleDropdown(event)">
+              Apply
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/members">Members</a>
+              <a href="/apply-for-partnership" class="active">Partners</a>
+            </div>
+          </div>
+          <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
+        </div>
+        
+        <div class="basket-icon" onclick="toggleBasket()">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="basket-count" id="basketCount">0</span>
+        </div>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero2" id="bario-for-business" style="background:var(--gold-dark);">
+      <div class="hero-content2 fade-in">
+        <h1 style="color:var(--primary-pink);">Bario for Business</h1>
+      </div>
+    </section>
+    <section class="pattern"></section>
+    <section class="business-intro">
+        <p style="font-size: 1.3rem; line-height: 1.9; color: var(--gold-dark); font-weight: 300; letter-spacing: 0.3px;">
+          Join the Bario ecosystem as a hospitality partner and connect with a global network of discerning travelers. Access valuable insights, unique collaboration opportunities, and enhanced visibility across our members' exclusive journeys.
+        </p>
+      </section>
+      <section class="pattern"></section>
+    <!-- Main Content -->
+    <main class="main-content-partnership">
+      <!-- Introduction -->
+
+      <!-- Tabbed Content -->
+      <section class="partners-tab">
+        <div class="partnership-tabs">
+          <button class="tab-button active" onclick="switchTab('overview')">Overview</button>
+          <button class="tab-button" onclick="switchTab('benefits')">Benefits</button>
+          <button class="tab-button" onclick="switchTab('opportunities')">Opportunities</button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content-partners active">
+          <div class="info-grid">
+            <div class="info-card fade-in">
+              <h4>Access</h4>
+              <p>By invitation designed for hospitality and lifestyle partners aligned with Bario's exclusive and design-forward approach.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Purpose</h4>
+              <p>Join the Bario ecosystem to reach an audience of discerning travelers through authentic placements and community-driven experiences.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Partnership Models</h4>
+              <p>• Annual partnership<br>• Affiliate revenue share<br>• Data & technology licensing</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Benefits Tab -->
+        <div id="benefits" class="tab-content-partners">
+          <div class="benefits-compact">
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>Priority Visibility</h3>
+                <p>Featured placement across Bario's handpicked city and island guides.</p>
+              </div>
+            </div>
+
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>AI Trip Builder</h3>
+                <p>Priority inclusion in AI recommendations and Partner Perks program.</p>
+              </div>
+            </div>
+
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>Traveler Insights</h3>
+                <p>Access aggregated data on traveler preferences and trends.</p>
+              </div>
+            </div>
+
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>Co-Branded Features</h3>
+                <p>Eligibility for city campaigns, private events, and collaborations.</p>
+              </div>
+            </div>
+
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>Premium Access</h3>
+                <p>Direct connection with members through exclusive experiences.</p>
+              </div>
+            </div>
+
+            <div class="benefit-compact fade-in">
+              <div class="content">
+                <h3>Editorial Exposure</h3>
+                <p>Premium placement in curated content and member communications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Opportunities Tab -->
+        <div id="opportunities" class="tab-content-partners">
+          <div class="info-grid">
+            <div class="info-card fade-in">
+              <h4>Bi-Annual partners</h4>
+              <p>Collaborate on exclusive partner experiences that bring together our community in stunning destinations around the world.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Content Series</h4>
+              <p>Partner on editorial content, photography, and storytelling that showcases your brand to our discerning audience.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Bario Select</h4>
+              <p>Join our curated label blending storytelling, travel, and lifestyle for premium positioning and member engagement.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Local Experiences</h4>
+              <p>Create bespoke experiences that connect members with authentic, insider moments in your city or destination.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>City Campaigns</h4>
+              <p>Feature in our destination-specific marketing initiatives and become the face of travel in your region.</p>
+            </div>
+
+            <div class="info-card fade-in">
+              <h4>Private Events</h4>
+              <p>Host or sponsor intimate gatherings for Bario members, creating meaningful connections and brand loyalty.</p>
+            </div>
+          </div>
+        </div>
+</section>
+  <section class="partner">
+    <div class="partner-content">
+        <h2 class="section-title-lighter2 fade-in">Who We Partner With</h2>
+        <div class="partner-list">
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-bed" style="color:var(--gold)"></i>&nbsp;&nbsp;Hotels & Boutique Stays</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-utensils" style="color:var(--gold)"></i>&nbsp;&nbsp;Restaurants & Bars</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-shirt" style="color:var(--gold)"></i>&nbsp;&nbsp;Fashion & Concept Stores</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-house-chimney" style="color:var(--gold)"></i>&nbsp;&nbsp;Short-Term Rental Platforms</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-car-side" style="color:var(--gold)"></i>&nbsp;&nbsp;Transportation & Mobility</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-map-location-dot" style="color:var(--gold)"></i>&nbsp;&nbsp;Local Experience Hosts</p>
+            </div>
+            <div class="partner-item">
+                <p class="luxury-text fade-in"><i class="fa-solid fa-spa" style="color:var(--gold)"></i>&nbsp;&nbsp;Wellness Spaces</p>
+            </div>
+        </div>
+    </div>
+</section>
+      <!-- Contact Form Section -->
+      <section class="waitlist" id="contact-form">
+        <div class="form-container-fixed">
+          <h2 class="fade-in" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; font-weight: 400; text-align: center;">Get in Touch</h2>
+          
+          <!-- iOS-Compatible Iframe Container -->
+          <div class="ios-iframe-wrapper">
+            <iframe data-tally-src="https://tally.so/embed/LZ9vWp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Bario for Business (Partnership Inquiry)"></iframe>
+          </div>
+          
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          
+          <div class="social-badge-container">
+            <div class="social-badge-placeholder"></div>
+            <div href="#" class="brand-badge">
+              <img src="../static/images/Prancheta 16.png" alt="Bario Club Logo" class="brand-badge-image">
+            </div>
+            <div class="social-badge">
+              <a href="https://www.instagram.com/bario.club/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Basket Overlay -->
+    <div class="basket-overlay" onclick="toggleBasket()"></div>
+
+    <!-- Basket Sidebar -->
+    <div class="basket-sidebar" id="basketSidebar">
+      <div class="basket-header">
+        <h3 class="basket-title">Your Basket</h3>
+        <button class="close-basket" onclick="toggleBasket()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="basket-items" id="basketItems">
+        <div class="empty-basket">
+          <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+          <p>Your basket is empty</p>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+        </div>
+      </div>
+
+      <div class="basket-footer" id="basketFooter" style="display: none;">
+        <div class="basket-total">
+          <span>Total:</span>
+          <span id="basketTotal">£0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
+          <i class="fas fa-shopping-cart"></i> Buy All Items
+        </button>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+      Guide added to basket!
+    </div>
+    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario Club Limited | All rights reserved.</p></div>
+    
+    <script>
+
+      // Tab switching
+      function switchTab(tabName) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content-partners').forEach(tab => {
+          tab.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-button').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Show selected tab
+        document.getElementById(tabName).classList.add('active');
+        
+        // Add active class to clicked button
+        event.target.classList.add('active');
+
+        // Re-trigger fade-in animations
+        const fadeElements = document.getElementById(tabName).querySelectorAll('.fade-in');
+        fadeElements.forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+          }, 100);
+        });
+      }
+
+      // Dropdown toggle for mobile
+      function toggleDropdown(e) {
+        e.preventDefault();
+        if (window.innerWidth <= 768) {
+          const dropdown = document.getElementById('applyDropdown');
+          dropdown.classList.toggle('active');
+        }
+      }
+
+      // Scroll to form
+      function scrollToForm(e) {
+        e.preventDefault();
+        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Enhanced scroll handling for header
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+          const currentScroll = window.pageYOffset;
+
+          if (currentScroll > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+
+          lastScroll = currentScroll;
+        });
+                    // Mobile menu functionality
+                    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                    const navLinks = document.getElementById('navLinks');
+                    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        
+                    function toggleMobileMenu() {
+                        mobileMenuToggle.classList.toggle('active');
+                        navLinks.classList.toggle('active');
+                        mobileMenuOverlay.classList.toggle('active');
+                        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                    }
+        
+                    function closeMobileMenu() {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        mobileMenuOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+        
+                    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+                    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        
+                    // Close mobile menu when clicking on nav links
+                    navLinks.addEventListener('click', (e) => {
+                        if (e.target.tagName === 'A') {
+                            closeMobileMenu();
+                        }
+                    });
+    });
+    </script>
+    <script>
+        const d3 = new Date();
+        let year = d3.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Enhanced scroll handling for header
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // Close mobile menu on window resize if it's open
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+        
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        
+                        // Fade in elements with 'fade-in' class
+                        if (target.classList.contains('fade-in')) {
+                            target.style.transform = 'translateY(0)';
+                            target.style.opacity = '1';
+                        }
+                        
+                        // Stop observing once animated
+                        revealObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+        
+            // Prepare all elements with 'fade-in' class for animation
+            const elementsToReveal = document.querySelectorAll('.fade-in');
+            
+            elementsToReveal.forEach(element => {
+                // Set initial hidden state
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px)';
+                element.style.transition = 'all 0.8s ease-out';
+                
+                // Start observing for scroll reveal
+                revealObserver.observe(element);
+            });
+        });
+
+        // Letter-by-letter typing animation function
+        function revealLetterByLetter(element) {
+            const text = element.textContent;
+            element.textContent = '';
+            element.style.opacity = '1';
+            
+            let index = 0;
+            const revealInterval = setInterval(() => {
+                if (index < text.length) {
+                    element.textContent += text[index];
+                    index++;
+                } else {
+                    clearInterval(revealInterval);
+                }
+            }, 30); // 30ms delay between each letter
+        }
+
+        const heroTitle = document.querySelector('.hero-content2 h1');
+        
+        if (heroTitle) {
+            // Set initial state
+            heroTitle.style.opacity = '0';
+            
+            // Start the typing animation after a short delay
+            setTimeout(() => {
+                // Fix the height to prevent layout shifts during typing
+                heroTitle.style.height = heroTitle.offsetHeight + 'px';
+                revealLetterByLetter(heroTitle);
+            }, 500); // 500ms delay before starting
+        }
+    </script>
+    <script>
+        // iOS cursor positioning fix
+        document.addEventListener('DOMContentLoaded', function() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            
+            if (isIOS) {
+                const iframe = document.querySelector('.ios-iframe-wrapper iframe');
+                
+                if (iframe) {
+                    // iOS-specific fixes
+                    iframe.style.webkitOverflowScrolling = 'touch';
+                    iframe.style.overflow = 'auto';
+                    
+                    // Listen for focus events on inputs (from iframe)
+                    window.addEventListener('message', function(event) {
+                        if (event.data && event.data.type === 'input-focus') {
+                            // Temporarily fix positioning when input is focused
+                            document.body.classList.add('ios-input-focused');
+                            
+                            setTimeout(() => {
+                                document.body.classList.remove('ios-input-changed');
+                            }, 500);
+                        }
+                    });
+                    
+                    // Additional touch event handling
+                    iframe.addEventListener('touchstart', function(e) {
+                        e.stopPropagation();
+                    }, { passive: true });
+                    
+                    // Force repaint to fix cursor positioning
+                    iframe.addEventListener('load', function() {
+                        setTimeout(() => {
+                            iframe.style.transform = 'translateZ(0)';
+                            setTimeout(() => {
+                                iframe.style.transform = 'none';
+                            }, 100);
+                        }, 1000);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

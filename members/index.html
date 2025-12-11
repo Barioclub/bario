@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Members | Bario - Curated Travel by Insiders">
+  <meta name="description" content="Join Bario's travel community. Choose from Explorer, Insider, or Creator membership tiers and unlock authentic, insider-curated recommendations worldwide.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Members | Bario - Curated Travel by Insiders">
+  <meta property="og:description" content="Join Bario's travel community. Choose from Explorer, Insider, or Creator membership tiers and unlock authentic travel experiences.">
+  <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+  <meta property="og:url" content="https://barioclub.com">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Members | Bario - Curated Travel by Insiders">
+  <meta name="twitter:description" content="Join Bario's travel community and discover the world through the eyes of people who truly know where to go.">
+  <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
+  
+  <script src="../script/script.js"></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  
+  <title>Members - Bario</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body id="membership-body">
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <!-- Header -->
+    <header id="header">
+      <a href="/" class="logo">
+        <img src="../static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/travel-guides">Travel Guides</a>
+          <div class="nav-dropdown" id="applyDropdown">
+            <a href="#" onclick="toggleDropdown(event)">
+              Apply
+              <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/members" class="active">Members</a>
+              <a href="/apply-for-partnership">Partners</a>
+            </div>
+          </div>
+          <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
+        </div>
+        
+        <div class="basket-icon" onclick="toggleBasket()">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="basket-count" id="basketCount">0</span>
+        </div>
+
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero2" id="apply-for-membership" style="background:unset; background-color: var(--primary-pink);">
+      <div class="hero-content2 fade-in">
+        <h1>Join Bario</h1>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content-membership">
+      <!-- Membership Introduction -->
+      <section class="membership-intro fade-in">
+        <p>Discover the world through the eyes of people who truly know where to go. Bario is a private travel community that blends human recommendations with intelligent trip planning, helping you explore, connect, and belong. Choose your path below and start your journey.</p>
+      </section>
+
+      <!-- Membership Tiers -->
+      <section class="tiers-container">
+        <!-- Explorer Tier -->
+        <div class="tier-card fade-in">
+          <div class="tier-header">
+            <h3 class="tier-name">Explorer</h3>
+            <div class="tier-price">Free</div>
+            <p class="tier-tagline">Start your journey</p>
+          </div>
+          
+          <p class="tier-description">Step into the Bario world and discover how travel feels when powered by intelligence and real experiences. Plan a few trips with our AI Trip Builder, browse selected city guides, and get a first glimpse of what our community has to offer.</p>
+          
+          <div class="tier-benefits">
+            <h4>What you get:</h4>
+            <ul>
+              <li>Access to selected guides and destinations</li>
+              <li>Limited AI Trip Builder requests</li>
+              <li>Your personal travel dashboard</li>
+              <li>Save and view your favourite itineraries</li>
+            </ul>
+          </div>
+          
+          <div class="perfect-for">
+            <strong>Perfect for:</strong>
+            Discovering Bario and planning your next trip effortlessly.
+          </div>
+          <button onclick="openModal('explorer')">
+            Apply as Explorer
+          </button>
+        </div>
+
+        <!-- Insider Tier (Featured) -->
+        <div class="tier-card featured fade-in">
+          <div class="tier-header">
+            <h3 class="tier-name">Insider</h3>
+            <div class="tier-price">Full Access</div>
+            <p class="tier-tagline">Unlock the Experience</p>
+          </div>
+          
+          <p class="tier-description">The complete Bario experience. Create unlimited AI-powered itineraries, access every destination, collaborate on group trips, and enjoy exclusive partner perks and invitations to member events.</p>
+          
+          <div class="tier-benefits">
+            <h4>What you get:</h4>
+            <ul>
+              <li>Unlimited AI Trip Builder access</li>
+              <li>Full library of destinations and guides</li>
+              <li>Group and shared trip planning</li>
+              <li>Access to member-only lists and features</li>
+              <li>Invitations to selected events and collaborations</li>
+            </ul>
+          </div>
+          
+          <div class="perfect-for">
+            <strong>Perfect for:</strong>
+            Curious travellers who want smarter, richer, and more connected adventures.
+          </div>
+          <button onclick="openModal('insider')">
+            Apply as Insider
+          </button>
+        </div>
+
+        <!-- Creator Tier -->
+        <div class="tier-card fade-in">
+          <div class="tier-header">
+            <h3 class="tier-name">Creator</h3>
+            <div class="tier-price">Commission-Based</div>
+            <p class="tier-tagline">For Travel Influencers</p>
+          </div>
+          
+          <p class="tier-description">Join the Bario Creator Program designed for travel influencers who want to grow their audience, collaborate, and earn. As a Bario Creator, you can:</p>
+          
+          <div class="tier-benefits">
+            <h4>What you get:</h4>
+            <ul>
+              <li>Share your travel lists and favorite locations on our platform</li>
+              <li>Co-create exclusive guides and joint posts with Bario</li>
+              <li>Partner with travel brands featured in our ecosystem</li>
+              <li>Earn commissions from bookings and revenue generated through your content</li>
+            </ul>
+          </div>
+          
+          <div class="perfect-for">
+            <strong>Perfect for:</strong>
+            Travel influencers and content creators looking to monetize their expertise and grow their audience.
+          </div>
+          
+          <button onclick="openModal('creator')">
+            Apply as Creator
+          </button>
+        </div>
+      </section>
+    </main>
+    <section class="pattern" style="height:10vh;"></section>
+        <!-- Modal for Explorer Form -->
+        <div id="explorerModal" class="modal-members">
+            <div class="modal-content-members">
+              <div class="modal-header-members">
+                <h2>Apply as Explorer</h2>
+                <button class="close-modal-members" onclick="closeModal('explorer')">&times;</button>
+              </div>
+              <div class="modal-body-members">
+                <div class="ios-iframe-wrapper">
+                    <iframe data-tally-src="https://tally.so/embed/lbB4AN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Explorer - Membership Application"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+    <!-- Modal for Insider Form -->
+    <div id="insiderModal" class="modal-members">
+        <div class="modal-content-members">
+          <div class="modal-header-members">
+            <h2>Apply as Insider</h2>
+            <button class="close-modal-members" onclick="closeModal('insider')">&times;</button>
+          </div>
+          <div class="modal-body-members">
+            <div class="ios-iframe-wrapper">
+                <iframe data-tally-src="https://tally.so/embed/81qEeP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="526" frameborder="0" marginheight="0" marginwidth="0" title="Insider - Membership Application"></iframe>
+                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Modal for Creator Form -->
+    <div id="creatorModal" class="modal-members">
+      <div class="modal-content-members">
+        <div class="modal-header-members">
+          <h2>Apply as Creator</h2>
+          <button class="close-modal-members" onclick="closeModal('creator')">&times;</button>
+        </div>
+        <div class="modal-body-members">
+          <div class="ios-iframe-wrapper">
+            <iframe data-tally-src="https://tally.so/embed/kdlKA1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="715" frameborder="0" marginheight="0" marginwidth="0" title="Bario Creator Program – Apply"></iframe>
+            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Basket Overlay -->
+    <div class="basket-overlay" onclick="toggleBasket()"></div>
+
+    <!-- Basket Sidebar -->
+    <div class="basket-sidebar" id="basketSidebar">
+      <div class="basket-header">
+        <h3 class="basket-title">Your Basket</h3>
+        <button class="close-basket" onclick="toggleBasket()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="basket-items" id="basketItems">
+        <div class="empty-basket">
+          <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+          <p>Your basket is empty</p>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+        </div>
+      </div>
+
+      <div class="basket-footer" id="basketFooter" style="display: none;">
+        <div class="basket-total">
+          <span>Total:</span>
+          <span id="basketTotal">£0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
+          <i class="fas fa-shopping-cart"></i> Buy All Items
+        </button>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+      Guide added to basket!
+    </div>
+
+    <div class="footnote">
+      <p>© Copyright&nbsp;<span id="demo"></span>&nbsp;Bario Club Limited | All rights reserved.</p>
+    </div>
+
+    <script>
+      const d3 = new Date();
+      let year = d3.getFullYear();
+      document.getElementById("demo").innerHTML = year;
+
+      // Modal functions
+      function openModal(tier) {
+        const modal = document.getElementById(tier + 'Modal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          
+          // Load Tally form if not already loaded
+          const iframe = modal.querySelector('iframe[data-tally-src]');
+          if (iframe && !iframe.src) {
+            iframe.src = iframe.dataset.tallySrc;
+          }
+        }
+      }
+
+      function closeModal(tier) {
+        const modal = document.getElementById(tier + 'Modal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      // Close modal when clicking outside
+      window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal-members')) {
+          event.target.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Tally loading script
+      var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const target = entry.target;
+              
+              if (target.classList.contains('fade-in')) {
+                target.style.transform = 'translateY(0)';
+                target.style.opacity = '1';
+              }
+              
+              revealObserver.unobserve(target);
+            }
+          });
+        }, observerOptions);
+
+        const elementsToReveal = document.querySelectorAll('.fade-in');
+        
+        elementsToReveal.forEach(element => {
+          element.style.opacity = '0';
+          element.style.transform = 'translateY(50px)';
+          element.style.transition = 'all 0.8s ease-out';
+          
+          revealObserver.observe(element);
+        });
+
+        // Hero title typing animation
+        const heroTitle = document.querySelector('.hero-content2 h1');
+        
+        if (heroTitle) {
+          heroTitle.style.opacity = '0';
+          
+          setTimeout(() => {
+            const text = heroTitle.textContent;
+            heroTitle.textContent = '';
+            heroTitle.style.opacity = '1';
+            
+            let index = 0;
+            const revealInterval = setInterval(() => {
+              if (index < text.length) {
+                heroTitle.textContent += text[index];
+                index++;
+              } else {
+                clearInterval(revealInterval);
+              }
+            }, 30);
+          }, 500);
+        }
+
+        // iOS cursor positioning fix
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        
+        if (isIOS) {
+          const iframes = document.querySelectorAll('.ios-iframe-wrapper iframe');
+          
+          iframes.forEach(iframe => {
+            iframe.style.webkitOverflowScrolling = 'touch';
+            iframe.style.overflow = 'auto';
+            
+            iframe.addEventListener('touchstart', function(e) {
+              e.stopPropagation();
+            }, { passive: true });
+            
+            iframe.addEventListener('load', function() {
+              setTimeout(() => {
+                iframe.style.transform = 'translateZ(0)';
+                setTimeout(() => {
+                  iframe.style.transform = 'none';
+                }, 100);
+              }, 1000);
+            });
+          });
+        }
+    </script>
+    <script>
+        // MAIN INITIALIZATION
+        document.addEventListener('DOMContentLoaded', () => {
+          initializeHeaderScroll();
+          initializeMobileMenu();
+          initializeHeroAnimations();
+          initializeScrollRevealAnimations();
+          initializeParallaxScroll();
+          initializeSectionTransitions();
+          initializeSmoothScrollButtons();
+        });
+        
+        // HEADER & NAVIGATION
+        function initializeHeaderScroll() {
+          const header = document.getElementById('header');
+          if (!header) return;
+          
+          let lastScroll = 0;
+        
+          window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+        
+            if (currentScroll > 50) {
+              header.classList.add('scrolled');
+            } else {
+              header.classList.remove('scrolled');
+            }
+        
+            lastScroll = currentScroll;
+          });
+        }
+        
+        function initializeMobileMenu() {
+          const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+          const navLinks = document.getElementById('navLinks');
+          const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+          const dropdownTrigger = document.querySelector('.nav-dropdown > a');
+        
+          function toggleMobileMenu() {
+            if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+            
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+          }
+        
+          function closeMobileMenu() {
+            if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+            
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        
+          // Dropdown toggle
+          if (dropdownTrigger) {
+            dropdownTrigger.addEventListener('click', (e) => {
+              e.preventDefault();
+              if (window.innerWidth <= 768) {
+                const dropdown = document.getElementById('applyDropdown');
+                if (dropdown) {
+                  dropdown.classList.toggle('active');
+                }
+              }
+            });
+          }
+        
+          if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+          }
+          
+          if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+          }
+        
+          // Close mobile menu when clicking on nav links
+          if (navLinks) {
+            navLinks.addEventListener('click', (e) => {
+              if (e.target.tagName === 'A' && !e.target.parentElement.classList.contains('nav-dropdown')) {
+                closeMobileMenu();
+              }
+            });
+          }
+        
+          // Close mobile menu on window resize if it's open
+          window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+              closeMobileMenu();
+            }
+          });
+        }
+    </script>   
+</body>
+</html>
