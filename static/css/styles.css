@@ -2242,7 +2242,7 @@ button.remove-item:hover {
     /* backdrop-filter: blur(5px); */
     box-shadow: 
     0 0 0 5px var(--primary-pink),                     /* middle border */
-    0 0 0 10px var(--cream);  
+    0 0 0 10px var(--nude);  
 }
 
 
