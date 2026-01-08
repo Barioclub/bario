@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="title" content="Members | Bario - Curated Travel by Insiders">
+  <meta name="title" content="Membership Tiers | Bario - Curated Travel by Insiders">
   <meta name="description" content="Join Bario's travel community. Choose from Explorer, Insider, or Creator membership tiers and unlock authentic, insider-curated recommendations worldwide.">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Members | Bario - Curated Travel by Insiders">
+  <meta property="og:title" content="Membership Tiers | Bario - Curated Travel by Insiders">
   <meta property="og:description" content="Join Bario's travel community. Choose from Explorer, Insider, or Creator membership tiers and unlock authentic travel experiences.">
   <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
   <meta property="og:url" content="https://barioclub.com">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Members | Bario - Curated Travel by Insiders">
+  <meta name="twitter:title" content="Membership Tiers | Bario - Curated Travel by Insiders">
   <meta name="twitter:description" content="Join Bario's travel community and discover the world through the eyes of people who truly know where to go.">
   <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
   
   <script src="../script/script.js"></script>
   <script async src="https://tally.so/widgets/embed.js"></script>
   
-  <title>Members - Bario</title>
+  <title>Membership Tiers - Bario</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="../static/css/styles.css" rel="stylesheet">
   <link rel="icon" href="../static/images/Bario-Logo-Rounded.png">
@@ -40,16 +40,8 @@
         <div class="nav-links" id="navLinks">
           <a href="/">Home</a>
           <a href="/travel-guides">Travel Guides</a>
-          <div class="nav-dropdown" id="applyDropdown">
-            <a href="#" onclick="toggleDropdown(event)">
-              Apply
-              <i class="fas fa-chevron-down dropdown-arrow"></i>
-            </a>
-            <div class="dropdown-menu">
-              <a href="/members" class="active">Members</a>
-              <a href="/apply-for-partnership">Partners</a>
-            </div>
-          </div>
+          <a href="/members" class="active">Membership Tiers</a>
+          <a href="/apply-for-partnership">Partners</a>
           <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
         </div>
         
@@ -69,7 +61,7 @@
     <!-- Hero Section -->
     <section class="hero2" id="apply-for-membership" style="background:unset; background-color: var(--primary-pink);">
       <div class="hero-content2 fade-in">
-        <h1>Join Bario</h1>
+        <h1>Membership Tiers</h1>
       </div>
     </section>
 
@@ -106,9 +98,9 @@
             <strong>Perfect for:</strong>
             Discovering Bario and planning your next trip effortlessly.
           </div>
-          <button onclick="openModal('explorer')">
+          <!-- <button onclick="openModal('explorer')">
             Apply as Explorer
-          </button>
+          </button> -->
         </div>
 
         <!-- Insider Tier (Featured) -->
@@ -136,9 +128,9 @@
             <strong>Perfect for:</strong>
             Curious travellers who want smarter, richer, and more connected adventures.
           </div>
-          <button onclick="openModal('insider')">
+          <!-- <button onclick="openModal('insider')">
             Apply as Insider
-          </button>
+          </button> -->
         </div>
 
         <!-- Creator Tier -->
@@ -164,83 +156,15 @@
           <div class="perfect-for">
             <strong>Perfect for:</strong>
             Travel influencers and content creators looking to monetize their expertise and grow their audience.
-          </div>
-          
+          <!-- </div>
           <button onclick="openModal('creator')">
             Apply as Creator
-          </button>
+          </button> -->
         </div>
       </section>
-      <section class="application-process-section">
-        <div class="process-preview fade-in">
-            <h3 class="section-subtitle" style="text-align:center;">Application Process</h3>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4 class="step-title">Submit Application</h4>
-                    <p class="step-desc">Complete the form</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                        <h4 class="step-title">Review Process</h4>
-                        <p class="step-desc">2-3 business days</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4 class="step-title">Welcome</h4>
-                        <p class="step-desc">Join our community</p>
-                    </div>
-            </div>
-        </div>
-        </section>
     </main>
     <section class="pattern" style="height:10vh;"></section>
-        <!-- Modal for Explorer Form -->
-        <div id="explorerModal" class="modal-members">
-            <div class="modal-content-members">
-              <div class="modal-header-members">
-                <h2>Apply as Explorer</h2>
-                <button class="close-modal-members" onclick="closeModal('explorer')">&times;</button>
-              </div>
-              <div class="modal-body-members">
-                <div class="ios-iframe-wrapper">
-                    <iframe data-tally-src="https://tally.so/embed/lbB4AN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Explorer - Membership Application"></iframe>
-                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-                    
-                </div>
-              </div>
-            </div>
-          </div>
-    <!-- Modal for Insider Form -->
-    <div id="insiderModal" class="modal-members">
-        <div class="modal-content-members">
-          <div class="modal-header-members">
-            <h2>Apply as Insider</h2>
-            <button class="close-modal-members" onclick="closeModal('insider')">&times;</button>
-          </div>
-          <div class="modal-body-members">
-            <div class="ios-iframe-wrapper">
-                <iframe data-tally-src="https://tally.so/embed/81qEeP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="526" frameborder="0" marginheight="0" marginwidth="0" title="Insider - Membership Application"></iframe>
-                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- Modal for Creator Form -->
-    <div id="creatorModal" class="modal-members">
-      <div class="modal-content-members">
-        <div class="modal-header-members">
-          <h2>Apply as Creator</h2>
-          <button class="close-modal-members" onclick="closeModal('creator')">&times;</button>
-        </div>
-        <div class="modal-body-members">
-          <div class="ios-iframe-wrapper">
-            <iframe data-tally-src="https://tally.so/embed/kdlKA1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="715" frameborder="0" marginheight="0" marginwidth="0" title="Bario Creator Program – Apply"></iframe>
-            <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Basket Overlay -->
     <div class="basket-overlay" onclick="toggleBasket()"></div>
