@@ -72,6 +72,49 @@
       background-color: var(--cream);
       transition: background-color 0.3s ease;
   }
+  /* Custom Scrollbar - Overlay Style */
+:root {
+  scrollbar-gutter: stable;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Make scrollbar overlay (not take space) */
+body {
+  overflow-y: overlay; /* Deprecated but still works in some browsers */
+}
+
+/* Modern approach - prevent layout shift */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
   #section-transition-overlay {
     transition: opacity 0.3s ease;
   }
