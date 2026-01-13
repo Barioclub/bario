@@ -3,136 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Standard Meta Tags -->
     <meta name="title" content="Bario | Curated Travel by Insiders, Shared by Members">
     <meta name="description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bario | Curated Travel by Insiders, Shared by Members">
-    <meta property="og:description" content="Bario is an invite-only travel platform for authentic, insider-curated recommendations. Discover hidden gems, exclusive experiences, and connect with like-minded travelers worldwide.">
-    <meta property="og:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
-    <meta property="og:url" content="https://barioclub.com">
-    <meta property="og:site_name" content="Bario">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bario | Curated Travel by Insiders, Shared by Members">
-    <meta name="twitter:description" content="Discover hidden travel gems and exclusive recommendations on Bario, a private travel community for meaningful, local-style exploration.">
-    <meta name="twitter:image" content="https://barioclub.com/static/images/Bario-Logo-Rounded.png">
-    <meta name="twitter:site" content="@yourtwitterhandle">
-    <script src="script/script.js"></script>
-    <script async src="https://tally.so/widgets/embed.js"></script>
+    
     <title>Bario - Exclusive Travel Experiences</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="static/css/styles.css" rel="stylesheet">
     <link rel="icon" href="static/images/Bario-Logo-Rounded.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-    <body>
-        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-        <div class="grid-container">
-            <header id="header">
-                <a href="/" class="logo">
-                    <img src="./static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
-                </a>
-                <!-- <div>
-                  <button>Pre-launch List</button>
-                </div> -->
-                <div class="nav-right">
-                    <div class="nav-links" id="navLinks">
-                      <a href="/" class="active">Home</a>
-                      <a href="/travel-guides">Travel Guides</a>
-                      <a href="/members">Membership Tiers</a>
-                      <a href="/apply-for-partnership">Partners</a>
-                      <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
-                    </div>
-                    
-                    <div class="basket-icon" onclick="toggleBasket()">
-                      <i class="fas fa-shopping-basket"></i>
-                      <span class="basket-count" id="basketCount">0</span>
-                    </div>
-            
-                    <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-            </header>
-    
-            <section class="hero">
-                <div class="hero-content fade-in">
-                    <h1>The members-only travel platform.</h1>
-                    <p class="luxury-text">Bario is a private travel community that redefines exploration. It connects real travelers and local insiders to share authentic, beloved places, while using intelligent AI trip planning to make every journey effortless and personalized.</p>
-                    <p class="luxury-text">Built on trust and quality, Bario helps members plan unique trips, manage their travel lists, discover recommendations from a trusted global circle, and access exclusive partner benefits and community gatherings</p>
-                    <p class="luxury-text fade-in" style="margin-top: 3rem; font-size: 1.2rem; font-family: var(--heading-font); font-weight:500; color: var(--dark-green);">Because meaningful travel isn’t about how far you go, it’s about how deeply you experience it.</p>
-                    <!-- <button style="margin-top: 3rem;" id="membership">Access Platform</button> -->
-                    <!-- <button style="margin-top: 3rem;" id="partnership">Apply for Membership</button> -->
-                </div>
-                <div class="hero-image fade-in"></div>
-            </section>
-            </section>
-            <section class="pattern"></section>
-            <section class="who-we-are">
-                
-                <div class="who-we-are-content">
-                    <h2 class="section-title-lighter fade-in">The Story Behind Bario</h2>
-                    <p class="luxury-text-lighter fade-in">It all started with a simple habit, whenever our founders traveled, they would reach out to friends for the best local recommendations. They weren't looking for the usual tourist spots but instead sought out the hidden gems. A charming neighborhood café, a bustling fruit market, an offbeat gallery, or a rooftop bar with the perfect view.</p>
-                    <p class="luxury-text-lighter fade-in" style="margin-top: 2rem;">Having traveled across the world, they always felt that the best experiences came from living like a local, immersing themselves in the true essence of a place rather than following a guidebook.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--primary-pink); font-family: var(--heading-font); font-size: 1.4rem; font-weight:500;">Welcome to Bario, a members-only travel platform built by travelers, for travelers.</p>
+<body>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="grid-container">
+        <header id="header">
+            <a href="/" class="logo">
+                <img src="./static/images/Prancheta 1.png" alt="Bario Club Logo" class="logo-image">
+            </a>
+            <div class="nav-right">
+                <div class="nav-links" id="navLinks">
+                    <a href="/" class="active">Home</a>
+                    <a href="/travel-guides">Travel Guides</a>
+                    <a href="/members">Membership Tiers</a>
+                    <a href="/apply-for-partnership">Partners</a>
+                    <a id="platform" href="https://bario-mvp-web-app.vercel.app/login" target="_blank">Access Platform</a>
                 </div>
                 
-            </section>
-            <section class="pattern"></section>
-            <section class="about">
-                <div class="service-image1"></div>
-                <div class="about-content">
-                    <h2 class="section-title">Our Journey</h2>
-                    <p class="luxury-text fade-in">The travels of our founders around the world laid the foundation for everything we do. As their travels took them from Europe to South America, Asia to the Middle East, they realized the same need kept coming up: a trusted way to discover local favorites through real people, not algorithms.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem;">Fast forward to last year, they decided to turn this idea into something real: a private community of like-minded travelers, designed to connect, share knowledge, and elevate each other's experiences.</p>
-                    <p class="luxury-text fade-in" style="margin-top: 2rem;">And so, Bario was born, a members-only travel platform built by travelers, for travelers.</p>
-                  </div>
-            </section>
-           
-  </div>
-      <!-- Basket Overlay -->
-      <div class="basket-overlay" onclick="toggleBasket()"></div>
+                <div class="basket-icon" onclick="toggleBasket()">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="basket-count" id="basketCount">0</span>
+                </div>
+        
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
 
-      <!-- Basket Sidebar -->
-      <div class="basket-sidebar" id="basketSidebar">
-          <div class="basket-header">
-              <h3 class="basket-title">Your Basket</h3>
-              <button class="close-basket" onclick="toggleBasket()">
-                  <i class="fas fa-times"></i>
-              </button>
-          </div>
-          
-          <div class="basket-items" id="basketItems">
-              <div class="empty-basket">
-                  <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
-                  <p>Your basket is empty</p>
-                  <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content fade-in">
+                <h1>The members-only travel platform.</h1>
+                <p class="luxury-text">Bario is a private travel community that redefines exploration. We connect real travelers and local insiders to share authentic, beloved places, while using intelligent AI trip planning to make every journey effortless and personalized.</p>
+                <p class="luxury-text" style="margin-top: 2rem;">Built on trust and quality, Bario helps members plan unique trips, manage their travel lists, discover recommendations from a trusted global circle, and access exclusive partner benefits and community gatherings.</p>
+                <p class="luxury-text fade-in" style="margin-top: 3rem; font-size: 1.2rem; font-family: var(--heading-font); font-weight:500; color: var(--dark-green);">Because meaningful travel isn't about how far you go, it's about how deeply you experience it.</p>
+            </div>
+            <div class="hero-image fade-in"></div>
+        </section>
+
+        <section class="pattern"></section>
+
+
+        <!-- Feature 1: Profile & Preferences -->
+        <section class="about">
+            <div class="service-image1" style="background-image: url('./static/images/material3.png');"></div>
+            <div class="about-content">
+                <h2 class="section-title">Create Your Travel Profile</h2>
+                <p class="luxury-text fade-in">Begin your journey by setting up a personalized profile that captures your unique travel style. Tell us about your preferences, whether you're a foodie seeking culinary adventures, a culture enthusiast, or an adventure seeker.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Your profile becomes the foundation for all your recommendations, ensuring every suggestion aligns with your interests, budget, and travel rhythm.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--gold-dark); font-weight: 500;">✦ Set travel preferences and interests<br>✦ Define your style and budget<br>✦ Unlock personalized experiences</p>
+            </div>
+        </section>
+
+        <!-- Feature 2: AI Trip Builder -->
+        <section class="about">
+            <div class="about-content">
+                <h2 class="section-title">AI Trip Builder</h2>
+                <p class="luxury-text fade-in">Experience the power of intelligent travel planning. Our AI Trip Builder generates a complete, tailored itinerary in seconds based on your style, dates, and interests.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Simply input your destination, travel dates, and preferences, our AI does the rest. Get personalized day-by-day plans with activities, dining recommendations, and hidden gems you won't find in typical guidebooks.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--gold-dark); font-weight: 500;">✦ Instant personalized itineraries<br>✦ Smart scheduling based on your pace<br>✦ Recommendations from verified locations</p>
+            </div>
+            <div class="service-image1" style="background-image: url('./static/images/material2.png'); "></div>
+        </section>
+
+        <!-- Feature 3: Save & Refine -->
+        <section class="about">
+            <div class="service-image1" style="background-image: url('./static/images/material11.png'); "></div>
+            <div class="about-content">
+                <h2 class="section-title">Save, Edit & Refine</h2>
+                <p class="luxury-text fade-in">Your trips, your way. Save your AI-generated itineraries and refine them to perfection. Add personal touches, adjust timing, or swap recommendations based on your mood.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Create multiple versions, organize trips into collections, and keep all your travel plans in one beautifully designed space. From weekend getaways to month-long adventures, manage everything seamlessly.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--gold-dark); font-weight: 500;">✦ Flexible itinerary editing<br>✦ Save unlimited trips<br>✦ Organize by destination or theme</p>
+            </div>
+        </section>
+
+        <!-- Feature 4: Share & Collaborate -->
+        <section class="about">
+            <div class="about-content">
+                <h2 class="section-title">Share & Collaborate</h2>
+                <p class="luxury-text fade-in">Travel is better together. Share your itineraries with friends and travel companions, allowing them to add suggestions, vote on activities, and help shape the perfect trip.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Collaborate in real-time, leave comments, and ensure everyone's preferences are considered. Your shared trips become living documents that evolve with your group's needs.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--gold-dark); font-weight: 500;">✦ Real-time collaboration<br>✦ Share with friends & family<br>✦ Group decision making tools</p>
+            </div>
+            <div class="service-image1" style="background-image: url('./static/images/material7.png'); "></div>
+        </section>
+
+        <!-- Feature 5: Discover Locations -->
+        <section class="about">
+            <div class="service-image1" style="background-image: url('./static/images/material6.png'); "></div>
+            <div class="about-content">
+                <h2 class="section-title">Explore Verified Locations</h2>
+                <p class="luxury-text fade-in">Access thousands of verified locations from around the world, all curated for discerning travelers like you. Each recommendation comes from real members and local insiders who know these places intimately.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Browse by category, neighborhood, or vibe. Save your favorites to custom lists and discover the authentic experiences that make each destination special.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--gold-dark); font-weight: 500;">✦ Thousands of verified venues<br>✦ Insider recommendations<br>✦ Authentic local experiences</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="pattern"></section>
+        <section class="who-we-are">
+            
+            <div class="who-we-are-content">
+                <h2 class="section-title-lighter fade-in">The Story Behind Bario</h2>
+                <p class="luxury-text-lighter fade-in">It all started with a simple habit, whenever our founders traveled, they would reach out to friends for the best local recommendations. They weren't looking for the usual tourist spots but instead sought out the hidden gems. A charming neighborhood café, a bustling fruit market, an offbeat gallery, or a rooftop bar with the perfect view.</p>
+                <p class="luxury-text-lighter fade-in" style="margin-top: 2rem;">Having traveled across the world, they always felt that the best experiences came from living like a local, immersing themselves in the true essence of a place rather than following a guidebook.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem; color: var(--primary-pink); font-family: var(--heading-font); font-size: 1.4rem; font-weight:500;">Welcome to Bario, a members-only travel platform built by travelers, for travelers.</p>
+            </div>
+            
+        </section>
+        <section class="pattern"></section>
+        <section class="about">
+            <div class="service-image1"></div>
+            <div class="about-content" id="journey">
+                <h2 class="section-title">Our Journey</h2>
+                <p class="luxury-text fade-in">The travels of our founders around the world laid the foundation for everything we do. As their travels took them from Europe to South America, Asia to the Middle East, they realized the same need kept coming up: a trusted way to discover local favorites through real people, not algorithms.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">Fast forward to last year, they decided to turn this idea into something real: a private community of like-minded travelers, designed to connect, share knowledge, and elevate each other's experiences.</p>
+                <p class="luxury-text fade-in" style="margin-top: 2rem;">And so, Bario was born, a members-only travel platform built by travelers, for travelers.</p>
               </div>
-          </div>
-  
-          <div class="basket-footer" id="basketFooter" style="display: none;">
-              <div class="basket-total">
-                  <span>Total:</span>
-                  <span id="basketTotal">£0.00</span>
-              </div>
-              <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
-                  <i class="fas fa-shopping-cart"></i> Buy All Items
-              </button>
-          </div>
-      </div>
-  
-      <!-- Success Message -->
-      <div class="success-message" id="successMessage">
-          Guide added to basket!
-      </div>
-      <div class="social-links">
+        </section>
+
+        <!-- CTA Section -->
+        <section class="who-we-are" style="padding: 6rem 4rem; background-image: url(./static/images/pink-back.png); background-repeat: repeat; background-size: 100vw auto; background-position-y: top; background-position-x: center;">
+            <div class="who-we-are-content">
+                <h2 class="section-title fade-in">Ready to Transform Your Travel?</h2>
+                <p class="luxury-text fade-in" style="font-size: 1.1rem;">Join Bario today and experience travel planning reimagined. Create your profile, build your first AI-powered itinerary, and discover a world of authentic experiences.</p>
+                <button style="margin-top: 3rem;" target="_blank" id="membership">Access Platform</button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Basket and Footer (keeping existing code) -->
+    <div class="basket-overlay" onclick="toggleBasket()"></div>
+    <div class="basket-sidebar" id="basketSidebar">
+        <div class="basket-header">
+            <h3 class="basket-title">Your Basket</h3>
+            <button class="close-basket" onclick="toggleBasket()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="basket-items" id="basketItems">
+            <div class="empty-basket">
+                <i class="fas fa-shopping-basket" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;"></i>
+                <p>Your basket is empty</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add some guides to get started!</p>
+            </div>
+        </div>
+        <div class="basket-footer" id="basketFooter" style="display: none;">
+            <div class="basket-total">
+                <span>Total:</span>
+                <span id="basketTotal">£0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToMultipleCheckout()">
+                <i class="fas fa-shopping-cart"></i> Buy All Items
+            </button>
+        </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        Guide added to basket!
+    </div>
+
+    <div class="social-links">
         <div class="social-badge">
             <a href="https://www.instagram.com/bario.club/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
@@ -141,458 +185,280 @@
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
-      </div>
-    <div class="footnote"><p>©  Copyright&nbsp;<span id="demo"></span> &nbsp;Bario Club Limited | All rights reserved.</p></div>
-<script>
-    const d2 = new Date();
-    let year = d2.getFullYear();
-    document.getElementById("demo").innerHTML = year;
-</script>
-<script>
-    // MAIN INITIALIZATION
-    document.addEventListener('DOMContentLoaded', () => {
-      initializeHeaderScroll();
-      initializeMobileMenu();
-      initializeHeroAnimations();
-      initializeScrollRevealAnimations();
-      initializeParallaxScroll();
-      initializeSectionTransitions();
-      initializeSmoothScrollButtons();
-    });
-    
-    // HEADER & NAVIGATION
-    function initializeHeaderScroll() {
-      const header = document.getElementById('header');
-      if (!header) return;
-      
-      let lastScroll = 0;
-    
-      window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-    
-        if (currentScroll > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
+    </div>
+
+    <div class="footnote">
+        <p>© Copyright&nbsp;<span id="demo"></span>&nbsp;Bario Club Limited | All rights reserved.</p>
+    </div>
+
+    <script>
+        const d2 = new Date();
+        let year = d2.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+
+        // Initialize all functions
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeHeaderScroll();
+            initializeMobileMenu();
+            initializeHeroAnimations();
+            initializeScrollRevealAnimations();
+            initializeParallaxScroll();
+            initializeSectionTransitions();
+            initializeSmoothScrollButtons();
+        });
+
+        function initializeHeaderScroll() {
+            const header = document.getElementById('header');
+            if (!header) return;
+            
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                lastScroll = currentScroll;
+            });
         }
-    
-        lastScroll = currentScroll;
-      });
-    }
-    
-    function initializeMobileMenu() {
-      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-      const navLinks = document.getElementById('navLinks');
-      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-      const dropdownTrigger = document.querySelector('.nav-dropdown > a');
-    
-      function toggleMobileMenu() {
-        if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
-        
-        mobileMenuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-      }
-    
-      function closeMobileMenu() {
-        if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
-        
-        mobileMenuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    
-      // Dropdown toggle
-      if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (window.innerWidth <= 768) {
-            const dropdown = document.getElementById('applyDropdown');
-            if (dropdown) {
-              dropdown.classList.toggle('active');
+
+        function initializeMobileMenu() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+
+            function toggleMobileMenu() {
+                if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+                mobileMenuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
             }
-          }
-        });
-      }
-    
-      if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-      }
-      
-      if (mobileMenuOverlay) {
-        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-      }
-    
-      // Close mobile menu when clicking on nav links
-      if (navLinks) {
-        navLinks.addEventListener('click', (e) => {
-          if (e.target.tagName === 'A' && !e.target.parentElement.classList.contains('nav-dropdown')) {
-            closeMobileMenu();
-          }
-        });
-      }
-    
-      // Close mobile menu on window resize if it's open
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
-          closeMobileMenu();
+
+            function closeMobileMenu() {
+                if (!mobileMenuToggle || !navLinks || !mobileMenuOverlay) return;
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            }
+            
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            }
+
+            if (navLinks) {
+                navLinks.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'A' && !e.target.parentElement.classList.contains('nav-dropdown')) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
         }
-      });
-    }
-</script>    
-<script>
 
-// HERO SECTION ANIMATIONS
+        function initializeHeroAnimations() {
+            const heroTitle = document.querySelector('.hero h1');
+            const heroText = document.querySelector('.hero .luxury-text');
+            const heroImage = document.querySelector('.hero-image');
 
+            if (!heroTitle || !heroText || !heroImage) return;
 
-function initializeHeroAnimations() {
-  const heroTitle = document.querySelector('.hero h1');
-  const heroText = document.querySelector('.hero .luxury-text');
-  const heroButton = document.querySelector('#membership');
-  const heroButton2 = document.querySelector('#partnership');
-  const heroImage = document.querySelector('.hero-image');
+            function revealLetterByLetter(element) {
+                const text = element.textContent;
+                element.textContent = '';
+                element.style.opacity = '1';
+                
+                let index = 0;
+                const revealInterval = setInterval(() => {
+                    if (index < text.length) {
+                        element.textContent += text[index];
+                        index++;
+                    } else {
+                        clearInterval(revealInterval);
+                    }
+                }, 30);
+            }
 
-  // Only run if hero elements exist
+            function fadeInText(element) {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'all 0.8s ease-out';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 100);
+            }
 
+            heroImage.style.opacity = '0';
+            heroImage.style.transform = 'translateY(50px)';
 
-  // Letter-by-letter reveal for title
-  function revealLetterByLetter(element) {
-      const text = element.textContent;
-      element.textContent = '';
-      element.style.opacity = '1';
-      
-      let index = 0;
-      const revealInterval = setInterval(() => {
-          if (index < text.length) {
-              element.textContent += text[index];
-              index++;
-          } else {
-              clearInterval(revealInterval);
-          }
-      }, 30);
-  }
+            setTimeout(() => {
+                heroImage.style.opacity = '1';
+                heroImage.style.transform = 'translateY(0)';
 
-  // Fade-in for description text
-  function fadeInText(element) {
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(20px)';
-      
-      setTimeout(() => {
-          element.style.transition = 'all 0.8s ease-out';
-          element.style.opacity = '1';
-          element.style.transform = 'translateY(0)';
-      }, 100);
-  }
-
-  // Sequence the hero animations
-  function runHeroSequence() {
-      // Start with hidden image
-      heroImage.style.opacity = '0';
-      heroImage.style.transform = 'translateY(50px)';
-
-      // Step 1: Reveal image
-      setTimeout(() => {
-          heroImage.style.opacity = '1';
-          heroImage.style.transform = 'translateY(0)';
-
-          // Step 2: Start title and text animations
-          setTimeout(() => {
-              // Fix title height to prevent layout shift
-              heroTitle.style.height = heroTitle.offsetHeight + 'px';
-              revealLetterByLetter(heroTitle);
-              fadeInText(heroText);
-              
-              // Step 3: Reveal buttons
-              setTimeout(() => {
-                  heroButton.style.opacity = '1';
-                  heroButton.style.transform = 'translateY(0)';
-                  heroButton2.style.opacity = '1';
-                  heroButton2.style.transform = 'translateY(0)';
-              }, 500);
-          }, 500);
-      }, 300);
-  }
-
-  runHeroSequence();
-}
-</script>
-<script>
-// SCROLL REVEAL ANIMATIONS (fade-in class)
-
-function initializeScrollRevealAnimations() {
-  const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-  };
-
-  const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              const target = entry.target;
-
-              // General Fade and Slide Animations
-              if (target.classList.contains('fade-in')) {
-                  target.style.transform = 'translateY(0)';
-                  target.style.opacity = '1';
-              }
-
-              // Specific Image Reveals
-              if (target.classList.contains('service-image1') ||
-                  target.classList.contains('service-image2') ||
-                  target.classList.contains('service-image3') ||
-                  target.classList.contains('service-image4')) {
-                  target.style.transform = 'scale(1)';
-                  target.style.opacity = '1';
-              }
-
-              revealObserver.unobserve(target);
-          }
-      });
-  }, observerOptions);
-
-  // Prepare elements for animation
-  const elementsToReveal = [
-      ...document.querySelectorAll('.fade-in'),
-      ...document.querySelectorAll('.service-image1'),
-      ...document.querySelectorAll('.service-image2'),
-      ...document.querySelectorAll('.service-image3'),
-      ...document.querySelectorAll('.service-image4')
-  ];
-
-  elementsToReveal.forEach(element => {
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(50px) scale(0.9)';
-      element.style.transition = 'all 0.8s ease-out';
-      revealObserver.observe(element);
-  });
-}
-</script>
-
-<script>
-// PARALLAX HORIZONTAL SCROLL
-
-function initializeParallaxScroll() {
-  const paralaxWrappers = document.querySelectorAll('.bario-parallax-wrapper, .bario-parallax-wrapper2');
-  const horizontalSections = document.querySelectorAll('.bario-horizontal-scroll-section, .bario-horizontal-scroll-section2');
-  const slides = document.querySelectorAll('.bario-slide, .bario-slide2');
-  
-  // Check if we're on mobile
-  function isMobile() {
-      return window.innerWidth <= 768;
-  }
-  
-  // Initialize all slides as visible on mobile
-  function initMobileLayout() {
-      if (isMobile()) {
-          slides.forEach(slide => {
-              slide.classList.add('visible');
-          });
-      }
-  }
-  
-  // Handle scroll animation only on desktop
-  function handleScroll() {
-      if (!isMobile()) {
-          // First horizontal scroll section
-          const scrollContainer = document.querySelector('.bario-scroll-container');
-          if (scrollContainer) {
-              const horizontalSection = document.querySelector('.bario-horizontal-scroll-section');
-              const scrollAmount = (window.scrollY - scrollContainer.offsetTop) / (scrollContainer.offsetHeight - window.innerHeight);
-              const slideWidth = window.innerWidth;
-              
-              if (horizontalSection && scrollAmount >= 0 && scrollAmount <= 1) {
-                  horizontalSection.style.transform = `translateX(-${scrollAmount * (slideWidth * 3)}px)`;
-                  
-                  // Handle slide visibility
-                  const slides = document.querySelectorAll('.bario-slide');
-                  slides.forEach((slide, index) => {
-                      const threshold = index / (slides.length - 1);
-                      const nextThreshold = (index + 1) / (slides.length - 1);
-                      
-                      if (scrollAmount >= threshold - 0.1 && scrollAmount <= nextThreshold + 0.1) {
-                          slide.classList.add('visible');
-                      } else {
-                          slide.classList.remove('visible');
-                      }
-                  });
-              }
-          }
-          
-          // Second horizontal scroll section
-          const scrollContainer2 = document.querySelector('.bario-scroll-container2');
-          if (scrollContainer2) {
-              const horizontalSection2 = document.querySelector('.bario-horizontal-scroll-section2');
-              const scrollAmount2 = (window.scrollY - scrollContainer2.offsetTop) / (scrollContainer2.offsetHeight - window.innerHeight);
-              const slideWidth2 = window.innerWidth;
-              
-              if (horizontalSection2 && scrollAmount2 >= 0 && scrollAmount2 <= 1) {
-                  horizontalSection2.style.transform = `translateX(-${scrollAmount2 * (slideWidth2 * 2)}px)`;
-                  
-                  // Handle slide visibility
-                  const slides2 = document.querySelectorAll('.bario-slide2');
-                  slides2.forEach((slide, index) => {
-                      const threshold = index / (slides2.length - 1);
-                      const nextThreshold = (index + 1) / (slides2.length - 1);
-                      
-                      if (scrollAmount2 >= threshold - 0.1 && scrollAmount2 <= nextThreshold + 0.1) {
-                          slide.classList.add('visible');
-                      } else {
-                          slide.classList.remove('visible');
-                      }
-                  });
-              }
-          }
-      }
-  }
-  
-  // Reset transforms on resize
-  function handleResize() {
-      if (isMobile()) {
-          // Reset any transform styles on horizontal sections
-          horizontalSections.forEach(section => {
-              section.style.transform = 'none';
-          });
-          
-          // Make all slides visible
-          slides.forEach(slide => {
-              slide.classList.add('visible');
-          });
-      } else {
-          // Re-trigger scroll handler to position correctly
-          handleScroll();
-      }
-  }
-  
-  // Set up event listeners
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('resize', handleResize);
-  
-  // Initialize mobile layout if needed
-  initMobileLayout();
-  handleResize();
-}
-</script>
-<script>
-// SECTION BACKGROUND TRANSITIONS (Light/Dark Mode)
-
-function initializeSectionTransitions() {
-  // Set transition on body for smooth color changes
-  document.body.style.transition = 'background-color 0.5s ease';
-  
-  // Get the sections we want to observe
-  const aboutSection = document.querySelector('.about');
-  const darkSection = document.querySelector('.bario-parallax-wrapper');
-  
-  // Get sections for reference
-  const allSections = document.querySelectorAll('.about, .bario-parallax-wrapper');
-  
-  if (!darkSection) return; // Exit if dark section doesn't exist
-  
-  // Create an intersection observer
-  const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          // When the dark section starts becoming visible
-          if (entry.target === darkSection) {
-              if (entry.isIntersecting && entry.intersectionRatio > 0.005) {
-                  // Change to dark mode
-                  document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark');
-                  document.body.classList.add('dark-mode');
-                  
-                  allSections.forEach(section => {
-                      section.classList.add('dark-mode-active');
-                  });
-              } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
-                  // Change back to light mode
-                  document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cream');
-                  document.body.classList.remove('dark-mode');
-                  
-                  allSections.forEach(section => {
-                      section.classList.remove('dark-mode-active');
-                  });
-              }
-          }
-      });
-  }, {
-      threshold: [0, 0.15, 0.3, 0.5, 0.7, 1],
-      rootMargin: '0px 0px 45% 0px'
-  });
-  
-  // Start observing the dark section
-  sectionObserver.observe(darkSection);
-  
-  // Create a section transition overlay div for additional effects (optional)
-  const transitionOverlay = document.createElement('div');
-  transitionOverlay.id = 'section-transition-overlay';
-  transitionOverlay.style.position = 'fixed';
-  transitionOverlay.style.top = '0';
-  transitionOverlay.style.left = '0';
-  transitionOverlay.style.width = '100%';
-  transitionOverlay.style.height = '100%';
-  transitionOverlay.style.pointerEvents = 'none';
-  transitionOverlay.style.opacity = '0';
-  transitionOverlay.style.zIndex = '999';
-  document.body.appendChild(transitionOverlay);
-}
-</script>
-<script>
-    function initializeSmoothScrollButtons() {
-        // Membership button → membership page
-        const membershipBtn = document.getElementById("membership");
-        if (membershipBtn) {
-          membershipBtn.addEventListener("click", () => {
-            window.location.href = "https://bario-mvp-web-app.vercel.app/login";
-          });
+                setTimeout(() => {
+                    heroTitle.style.height = heroTitle.offsetHeight + 'px';
+                    revealLetterByLetter(heroTitle);
+                    fadeInText(heroText);
+                }, 500);
+            }, 300);
         }
-      
-        // Partnership button → partnership page (update path if needed)
-        const partnershipBtn = document.getElementById("partnership");
-        if (partnershipBtn) {
-          partnershipBtn.addEventListener("click", () => {
-            window.location.href = "/apply-for-partnership";
-          });
+
+        function initializeScrollRevealAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        if (target.classList.contains('fade-in')) {
+                            target.style.transform = 'translateY(0)';
+                            target.style.opacity = '1';
+                        }
+                        if (target.classList.contains('service-image1')) {
+                            target.style.transform = 'scale(1)';
+                            target.style.opacity = '1';
+                        }
+                        revealObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            const elementsToReveal = [
+                ...document.querySelectorAll('.fade-in'),
+                ...document.querySelectorAll('.service-image1')
+            ];
+
+            elementsToReveal.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px) scale(0.9)';
+                element.style.transition = 'all 0.8s ease-out';
+                revealObserver.observe(element);
+            });
         }
-      }
-      
-</script>
-<script>
-// TAB FUNCTIONALITY (for forms/content switching)
 
-function showTab(tabId) {
-  // Hide all tabs
-  const tabs = document.querySelectorAll('.tab-content');
-  tabs.forEach(tab => tab.classList.remove('active'));
+        function initializeParallaxScroll() {
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
+            
+            function initMobileLayout() {
+                if (isMobile()) {
+                    document.querySelectorAll('.bario-slide').forEach(slide => {
+                        slide.classList.add('visible');
+                    });
+                }
+            }
+            
+            function handleScroll() {
+                if (!isMobile()) {
+                    const scrollContainer = document.querySelector('.bario-scroll-container');
+                    if (scrollContainer) {
+                        const horizontalSection = document.querySelector('.bario-horizontal-scroll-section');
+                        const scrollAmount = (window.scrollY - scrollContainer.offsetTop) / (scrollContainer.offsetHeight - window.innerHeight);
+                        const slideWidth = window.innerWidth;
+                        
+                        if (horizontalSection && scrollAmount >= 0 && scrollAmount <= 1) {
+                            horizontalSection.style.transform = `translateX(-${scrollAmount * (slideWidth * 3)}px)`;
+                            
+                            const slides = document.querySelectorAll('.bario-slide');
+                            slides.forEach((slide, index) => {
+                                const threshold = index / (slides.length - 1);
+                                const nextThreshold = (index + 1) / (slides.length - 1);
+                                
+                                if (scrollAmount >= threshold - 0.1 && scrollAmount <= nextThreshold + 0.1) {
+                                    slide.classList.add('visible');
+                                } else {
+                                    slide.classList.remove('visible');
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            
+            function handleResize() {
+                if (isMobile()) {
+                    document.querySelectorAll('.bario-horizontal-scroll-section').forEach(section => {
+                        section.style.transform = 'none';
+                    });
+                    document.querySelectorAll('.bario-slide').forEach(slide => {
+                        slide.classList.add('visible');
+                    });
+                } else {
+                    handleScroll();
+                }
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', handleResize);
+            initMobileLayout();
+            handleResize();
+        }
 
-  // Show selected tab
-  const selectedTab = document.getElementById(tabId);
-  if (selectedTab) {
-      selectedTab.classList.add('active');
-  }
+        function initializeSectionTransitions() {
+            document.body.style.transition = 'background-color 0.5s ease';
+            const darkSection = document.querySelector('.bario-parallax-wrapper');
+            const allSections = document.querySelectorAll('.about, .bario-parallax-wrapper');
+            
+            if (!darkSection) return;
+            
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.target === darkSection) {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.005) {
+                            document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark');
+                            document.body.classList.add('dark-mode');
+                            allSections.forEach(section => {
+                                section.classList.add('dark-mode-active');
+                            });
+                        } else if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                            document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cream');
+                            document.body.classList.remove('dark-mode');
+                            allSections.forEach(section => {
+                                section.classList.remove('dark-mode-active');
+                            });
+                        }
+                    }
+                });
+            }, {
+                threshold: [0, 0.15, 0.3, 0.5, 0.7, 1],
+                rootMargin: '0px 0px 45% 0px'
+            });
+            
+            sectionObserver.observe(darkSection);
+        }
 
-  // Update button states
-  const buttons = document.querySelectorAll('.tab-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  if (event && event.target) {
-      event.target.classList.add('active');
-  }
-}
+        function initializeSmoothScrollButtons() {
+            const membershipBtn = document.getElementById("membership");
+            if (membershipBtn) {
+                membershipBtn.addEventListener("click", () => {
+                    window.location.href = "https://bario-mvp-web-app.vercel.app/login";
+                });
+            }
+        }
 
-function toggleOfferDetails() {
-  const selectElement = document.getElementById('exclusiveOffers');
-  const offerDetailsGroup = document.getElementById('offerDetailsGroup');
-  const offerDetails = document.getElementById('offerDetails');
-
-  if (selectElement && offerDetailsGroup && offerDetails) {
-      if (selectElement.value === 'yes') {
-          offerDetailsGroup.style.display = 'block';
-          offerDetails.setAttribute('required', '');
-      } else {
-          offerDetailsGroup.style.display = 'none';
-          offerDetails.removeAttribute('required');
-      }
-  }
-}
-</script>
-    </body>
-    </html>
+        function toggleBasket() {
+            const sidebar = document.getElementById('basketSidebar');
+            const overlay = document.querySelector('.basket-overlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

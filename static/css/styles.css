@@ -85,7 +85,7 @@
   .grid-container {
       display: grid;
       /* grid-template-columns: repeat(12, 1fr); */
-      max-width: 1800px;
+      /* max-width: 1800px; */
       margin: 0 auto;
       /* gap: 2rem; */
   }
@@ -287,8 +287,13 @@
 }
 
   .service-image1 {
+      /* width: 700px;
+      height: 700px; */
       width: 100%;
-      height: 300px;
+      padding-bottom: 100%; 
+      background-size: cover;
+      background-position: center;
+      position: relative;
       background: url('../images/home1.png') center/cover;
       margin-bottom: 2rem;
       transition: var(--transition);
@@ -298,11 +303,11 @@
       0 0 0 5px var(--primary-pink),                     /* middle border */
       0 0 0 10px var(--gold);  
       border-radius:100px;
+      scale: 0.8;
   }
 
 
   .service-image1 {
-      height: 100%;
       filter: unset;
   }
 
@@ -342,7 +347,7 @@
     opacity:0.5;
   }
 
-  .section-title::after {
+  /* .section-title::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -351,7 +356,7 @@
       height: 2px;
       background: var(--cream-dark);
       transition: var(--transition);
-  }
+  } */
 
 
 
@@ -422,6 +427,8 @@
       margin: 0rem 0;
       min-height: 300px;
       transition: var(--transition);
+      align-items: center;
+      justify-items: center;
   }
 
   .about::before {
@@ -619,6 +626,8 @@ width: 100%;
     height:5vh;
     grid-column: 1 / -1;
 }
+
+
 
 .tally-embed {
     width: 100%;
@@ -2724,28 +2733,47 @@ button.remove-item:hover {
   }
   
   @media (max-width: 1100px) {
-    .about {
-        grid-template-columns: 1fr;
-        gap: 0rem;
-    }
-  
-    .about-content {
-        padding: 0rem;
-    }
   
     .who-we-are {
         padding: 4rem 2rem;
     }
-    .service-image1, .hero-image {
+    .hero-image {
       height: 270px;
       justify-self: center;
       width:70%;
   }
+  .about {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    justify-items: center;
+}
+
+.about-content {
+  padding: 0rem;
+  order: 2; /* Text appears second */
+  padding: 2rem 5rem;
+}
+#journey {
+padding: 2rem 0rem;
+}
+.service-image1 {
+  order: 1; /* Image appears first */
+  width:500px;
+  height:500px;
+  padding-bottom: unset;
+}
   .hero-image {
       height:200px;
   }
   }
   @media (max-width: 820px) {
+    .service-image1 {
+      border-radius: 30px;
+      border: 2px solid var(--gold);
+      box-shadow: 
+      0 0 0 2px var(--primary-pink),                     /* middle border */
+      0 0 0 5px var(--gold); 
+    }
     .main-content-partnership {
         padding: 4rem 2rem;
     }
@@ -2841,11 +2869,11 @@ button.remove-item:hover {
     header.scrolled {
         padding: 1rem 2rem;
     }
-    .service-image1 {
+    /* .service-image1 {
         height: 210px;
-    }
+    } */
     .about{
-      padding: 4rem 2rem 15rem 2rem;
+      padding: 4rem 2rem 8rem 2rem;
     }
     .form-row {
         flex-direction: column;
